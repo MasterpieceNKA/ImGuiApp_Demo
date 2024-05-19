@@ -16,15 +16,24 @@ public:
 
 ImGuiApp::App* ImGuiApp::CreateApp(int argc, char** argv)
 {
+	///*
+	IGA_CORE_INFO("Info");
+	IGA_CORE_WARN("Warn");
+	IGA_CORE_ERROR("Error");
+
+	IGA_INFO("Info");
+	IGA_WARN("Warn");
+	IGA_ERROR("Error");
+
+	IGA_ASSERT(true, "Client assertion");
+	IGA_CORE_ASSERT(false, "Core assertion"); 
+	//*/
+
 	ImGuiApp::AppSpecification spec;
 	spec.Name = "ImGui App Example";
 
 	ImGuiApp::App* app = new ImGuiApp::App(spec);
-    //ExampleLayer exampleLayer = ExampleLayer();
-    //const std::shared_ptr<ExampleLayer> exampleLayer;
-	///*
-    app->PushLayer<ExampleLayer>();
-    //app->PushLayer(exampleLayer);
+    app->PushLayer<ExampleLayer>(); 
 	app->SetMenubarCallback([app]()
 	{
 		if (ImGui::BeginMenu("File"))
@@ -35,7 +44,6 @@ ImGuiApp::App* ImGuiApp::CreateApp(int argc, char** argv)
 			}
 			ImGui::EndMenu();
 		}
-	});
-    //*/
+	}); 
 	return app;
 } 

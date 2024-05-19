@@ -12,4 +12,4 @@ set(ImGuiApp_Demo_SOURCE ${CMAKE_CURRENT_LIST_DIR}/src/ImGuiApp_Demo.cpp)
 
 add_executable(${PROJECT_NAME} ${ImGuiApp_Demo_SOURCE})
 
-target_link_libraries(${PROJECT_NAME} PUBLIC ImGuiAppLib)
+target_link_libraries(${PROJECT_NAME} PUBLIC ImGuiApp)
