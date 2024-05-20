@@ -4,8 +4,9 @@
 
 #include "App.h"
 #include "Layer.h"
-
 #include "Logger.h"
+
+#include "DemoApp.h"
 
 #include <string>
 
@@ -19,7 +20,9 @@ namespace ImGUIApp_Demo{
         }
         virtual void OnAttach() override
         {
-            //IGA_INFO("Attaching OpenGLSampleLayer");
+            ImGUIApp_Demo::DemoApp& m_App = static_cast<ImGUIApp_Demo::DemoApp&> (ImGuiApp::App::Get());
+            //ImGUIApp_Demo::DemoApp& m_App = (ImGUIApp_Demo::DemoApp&) ImGuiApp::App::Get();
+            m_Color  = &m_App.m_Color;
             create_triangle();
 	        create_shaders();
 	        create_framebuffer();
@@ -41,7 +44,7 @@ namespace ImGUIApp_Demo{
             ImGui::Begin("OpenGL"); 
             const float window_width = ImGui::GetContentRegionAvail().x;
 		    const float window_height = ImGui::GetContentRegionAvail().y;
-            //IGA_INFO("window_width: " + std::to_string(window_width) + ", window_height: " + std::to_string(window_height));
+            
             rescale_framebuffer(window_width, window_height);
             glViewport(0, 0, window_width, window_height);
 
@@ -63,6 +66,10 @@ namespace ImGUIApp_Demo{
             bind_framebuffer();
 		
             glUseProgram(shader);
+
+            int vertexColorLocation = glGetUniformLocation(shader, "vertexColor"); 
+            glUniform4f(vertexColorLocation, m_Color->x, m_Color->y, m_Color->z, m_Color->w);
+
             glBindVertexArray(VAO);
             glDrawArrays(GL_TRIANGLES, 0, 3);
             glBindVertexArray(0);
@@ -71,7 +78,7 @@ namespace ImGUIApp_Demo{
             unbind_framebuffer();	
         }
     private:
-        //ImGuiApp::App& app; 
+        ImVec4* m_Color; 
         const GLint WIDTH = 400;
         const GLint HEIGHT = 300;
 
@@ -85,7 +92,7 @@ namespace ImGUIApp_Demo{
         const char* vertex_shader_code = R"*(
         #version 330
 
-        layout (location = 0) in vec3 pos;
+        layout (location = 0) in vec3 pos; 
 
         void main()
         {
@@ -96,11 +103,12 @@ namespace ImGUIApp_Demo{
         const char* fragment_shader_code = R"*(
         #version 330
 
+        uniform vec4 vertexColor;
         out vec4 color;
 
         void main()
         {
-            color = vec4(0.0, 1.0, 0.0, 1.0);
+            color = vertexColor;
         }
         )*";
 
