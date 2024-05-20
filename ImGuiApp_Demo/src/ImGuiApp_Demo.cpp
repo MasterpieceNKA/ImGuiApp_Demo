@@ -17,6 +17,17 @@ public:
 	}
 };
 
+namespace ImGUIApp_Demo{
+	class DemoApp : public ImGuiApp::App
+	{
+	public:
+		DemoApp(const ImGuiApp::AppSpecification& appSpecification = ImGuiApp::AppSpecification()) 
+		: ImGuiApp::App(appSpecification){};
+    	~DemoApp() { };
+
+	};
+};
+
 ImGuiApp::App* ImGuiApp::CreateApp(int argc, char** argv)
 {
 	//IGA_CORE_INFO("Info");
@@ -33,7 +44,8 @@ ImGuiApp::App* ImGuiApp::CreateApp(int argc, char** argv)
 	ImGuiApp::AppSpecification spec;
 	spec.Name = "ImGui App Example";
 
-	ImGuiApp::App* app = new ImGuiApp::App(spec);
+	//ImGuiApp::App* app = new ImGuiApp::App(spec);
+	ImGuiApp::App* app = new ImGUIApp_Demo::DemoApp(spec);
     app->PushLayer<ExampleLayer>(); 
     app->PushLayer<ImGUIApp_Demo::OpenGLSampleLayer>(); 
 	app->SetMenubarCallback([app]()
