@@ -1,0 +1,117 @@
+\doxysection{Im\+Gui\+App\+::Layer Class Reference}
+\hypertarget{class_im_gui_app_1_1_layer}{}\label{class_im_gui_app_1_1_layer}\index{ImGuiApp::Layer@{ImGuiApp::Layer}}
+
+
+Template class for Im\+Gui frames. An Im\+Gui frame is marked by.  
+
+
+
+
+{\ttfamily \#include $<$Layer.\+h$>$}
+
+Inheritance diagram for Im\+Gui\+App\+::Layer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.161826cm]{class_im_gui_app_1_1_layer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_im_gui_app_1_1_layer_a3474004cc3627354020bcdc84f27bc4a}\label{class_im_gui_app_1_1_layer_a3474004cc3627354020bcdc84f27bc4a} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Layer} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_im_gui_app_1_1_layer}{Layer} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_im_gui_app_1_1_layer_a83daab955ac3eea2776f89a683eb5308}{On\+Attach}} ()
+\begin{DoxyCompactList}\small\item\em Called after object has been added to m\+\_\+\+Layer\+Stack of the \doxylink{class_im_gui_app_1_1_app}{App} application instance. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_im_gui_app_1_1_layer_af110bc02b78d068476af9b8d1c16ea24}{On\+Detach}} ()
+\begin{DoxyCompactList}\small\item\em Called when the \doxylink{class_im_gui_app_1_1_app}{App} application instance is shutting down. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_im_gui_app_1_1_layer_a35726c0ded8e8fbcb959586346145ab5}{On\+Update}} (float ts)
+\begin{DoxyCompactList}\small\item\em Called at the start of the render loop. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_im_gui_app_1_1_layer_afae27ec803185e61d9995b535a6ff215}{On\+UIRender}} ()
+\begin{DoxyCompactList}\small\item\em Called in the render loop within the Im\+Gui\+::\+New\+Frame(); and Im\+Gui\+::\+End(); lines to render Im\+Gui frame items. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_im_gui_app_1_1_layer_a4a6448c74ef23178abeccbd3c4b9d024}{On\+Post\+UIRender}} ()
+\begin{DoxyCompactList}\small\item\em Called after rendering loop Im\+Gui frame items i.\+e. after Im\+Gui\+::\+Render(); line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Template class for Im\+Gui frames. An Im\+Gui frame is marked by. 
+
+Im\+Gui\+::\+Begin("{}\+Im\+Gui\+\_\+\+Frame\+\_\+\+Name"{}); ... ... Im\+Gui\+::\+End(); 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_im_gui_app_1_1_layer_a83daab955ac3eea2776f89a683eb5308}\index{ImGuiApp::Layer@{ImGuiApp::Layer}!OnAttach@{OnAttach}}
+\index{OnAttach@{OnAttach}!ImGuiApp::Layer@{ImGuiApp::Layer}}
+\doxysubsubsection{\texorpdfstring{OnAttach()}{OnAttach()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_layer_a83daab955ac3eea2776f89a683eb5308} 
+virtual void Im\+Gui\+App\+::\+Layer\+::\+On\+Attach (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called after object has been added to m\+\_\+\+Layer\+Stack of the \doxylink{class_im_gui_app_1_1_app}{App} application instance. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a8e3771dd04437f55a53cb50a1954521f}{Im\+GUIApp\+\_\+\+Demo\+::\+Color\+Picker\+Layer}}, and \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_ab65719f09b9e4bc5506e3d0a26271184}{Im\+GUIApp\+\_\+\+Demo\+::\+Open\+GLSample\+Layer}}.
+
+\Hypertarget{class_im_gui_app_1_1_layer_af110bc02b78d068476af9b8d1c16ea24}\index{ImGuiApp::Layer@{ImGuiApp::Layer}!OnDetach@{OnDetach}}
+\index{OnDetach@{OnDetach}!ImGuiApp::Layer@{ImGuiApp::Layer}}
+\doxysubsubsection{\texorpdfstring{OnDetach()}{OnDetach()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_layer_af110bc02b78d068476af9b8d1c16ea24} 
+virtual void Im\+Gui\+App\+::\+Layer\+::\+On\+Detach (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called when the \doxylink{class_im_gui_app_1_1_app}{App} application instance is shutting down. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_ac1c85c85af673bfc4d6f5e291b768547}{Im\+GUIApp\+\_\+\+Demo\+::\+Open\+GLSample\+Layer}}.
+
+\Hypertarget{class_im_gui_app_1_1_layer_a4a6448c74ef23178abeccbd3c4b9d024}\index{ImGuiApp::Layer@{ImGuiApp::Layer}!OnPostUIRender@{OnPostUIRender}}
+\index{OnPostUIRender@{OnPostUIRender}!ImGuiApp::Layer@{ImGuiApp::Layer}}
+\doxysubsubsection{\texorpdfstring{OnPostUIRender()}{OnPostUIRender()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_layer_a4a6448c74ef23178abeccbd3c4b9d024} 
+virtual void Im\+Gui\+App\+::\+Layer\+::\+On\+Post\+UIRender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called after rendering loop Im\+Gui frame items i.\+e. after Im\+Gui\+::\+Render(); line. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a33d0b688e6b3de890c1694241b2d0377}{Im\+GUIApp\+\_\+\+Demo\+::\+Open\+GLSample\+Layer}}.
+
+\Hypertarget{class_im_gui_app_1_1_layer_afae27ec803185e61d9995b535a6ff215}\index{ImGuiApp::Layer@{ImGuiApp::Layer}!OnUIRender@{OnUIRender}}
+\index{OnUIRender@{OnUIRender}!ImGuiApp::Layer@{ImGuiApp::Layer}}
+\doxysubsubsection{\texorpdfstring{OnUIRender()}{OnUIRender()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_layer_afae27ec803185e61d9995b535a6ff215} 
+virtual void Im\+Gui\+App\+::\+Layer\+::\+On\+UIRender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called in the render loop within the Im\+Gui\+::\+New\+Frame(); and Im\+Gui\+::\+End(); lines to render Im\+Gui frame items. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a233507a5cfa8f3e7ab32cfba0da52acd}{Im\+GUIApp\+\_\+\+Demo\+::\+Color\+Picker\+Layer}}, \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_window_layer_acce4957ac844206557ee450067d60476}{Im\+GUIApp\+\_\+\+Demo\+::\+Demo\+Window\+Layer}}, \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_example_layer_a85505f582001b5a97c412d24257a7057}{Im\+GUIApp\+\_\+\+Demo\+::\+Example\+Layer}}, and \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a2905ef9efc4d635fece1f00173510cb5}{Im\+GUIApp\+\_\+\+Demo\+::\+Open\+GLSample\+Layer}}.
+
+\Hypertarget{class_im_gui_app_1_1_layer_a35726c0ded8e8fbcb959586346145ab5}\index{ImGuiApp::Layer@{ImGuiApp::Layer}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!ImGuiApp::Layer@{ImGuiApp::Layer}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_layer_a35726c0ded8e8fbcb959586346145ab5} 
+virtual void Im\+Gui\+App\+::\+Layer\+::\+On\+Update (\begin{DoxyParamCaption}\item[{float}]{ts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called at the start of the render loop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & Time in seconds between the last and current frames \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_layer_8h}{Layer.\+h}}\end{DoxyCompactItemize}

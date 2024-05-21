@@ -1,0 +1,186 @@
+\doxysection{Im\+Gui\+App\+::App Class Reference}
+\hypertarget{class_im_gui_app_1_1_app}{}\label{class_im_gui_app_1_1_app}\index{ImGuiApp::App@{ImGuiApp::App}}
+
+
+Class for maintaining the life cycle of the application.  
+
+
+
+
+{\ttfamily \#include $<$App.\+h$>$}
+
+Inheritance diagram for Im\+Gui\+App\+::App\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_im_gui_app_1_1_app}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_im_gui_app_1_1_app_ac75a299d3414485f5cff06b929635b7a}{App}} (const \mbox{\hyperlink{struct_im_gui_app_1_1_app_specification}{App\+Specification}} \&app\+Specification=\mbox{\hyperlink{struct_im_gui_app_1_1_app_specification}{App\+Specification}}())
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_im_gui_app_1_1_app}{App} object using the default \doxylink{struct_im_gui_app_1_1_app_specification}{App\+Specification} settings (name, window size) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_im_gui_app_1_1_app_aa7c0fb6ccc649302a334a96da755cfa3}{\texorpdfstring{$\sim$}{\string~}\+App}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor of the \doxylink{class_im_gui_app_1_1_app}{App} object ensures the child class constructors are called before running. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_app_1_1_app_a7c4336c7b471cd2a127172f98bd02f71}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Maintains the applications render "{}while"{} loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_app_1_1_app_a43b3453e27c92464dc60611c76ef6567}{Set\+Menubar\+Callback}} (const std\+::function$<$ void()$>$ \&menubar\+Callback)
+\begin{DoxyCompactList}\small\item\em Enables addition of Im\+Gui\+::\+Menu\+Item objects to the \doxylink{class_im_gui_app_1_1_app}{App} application object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_im_gui_app_1_1_app_a951ba2db6d88e3bff67065f538ffdabc}{Push\+Layer}} ()
+\begin{DoxyCompactList}\small\item\em Enables addition of Im\+Gui frame items to the \doxylink{class_im_gui_app_1_1_app}{App} application object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_app_1_1_app_ac26ba1bb009b2a66eb27f05de4a096ed}{Push\+Layer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_im_gui_app_1_1_layer}{Layer}} $>$ \&layer)
+\begin{DoxyCompactList}\small\item\em Enables addition of Im\+Gui frame items to the \doxylink{class_im_gui_app_1_1_app}{App} application object. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_app_1_1_app_a31bc7517752daf52aa37fd031dbc92b8}\label{class_im_gui_app_1_1_app_a31bc7517752daf52aa37fd031dbc92b8} 
+void {\bfseries Close} ()
+\begin{DoxyCompactList}\small\item\em Sets m\+\_\+\+Running to true to enable shutting down the app. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_im_gui_app_1_1_app_a5837b68d78df8b601205324d6fd5144d}{Get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Returns the time elapsed since the program started running (since GLFW was initialized) \end{DoxyCompactList}\item 
+GLFWwindow \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_im_gui_app_1_1_app_abc34fed94848fa255e7db72305995ce7}{Get\+Window\+Handle}} () const
+\begin{DoxyCompactList}\small\item\em Get the main Window Handle object of the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_im_gui_app_1_1_app}{App}} \& \mbox{\hyperlink{class_im_gui_app_1_1_app_afc47dad7ca56374cde72116148ebb58f}{Get}} ()
+\begin{DoxyCompactList}\small\item\em Returns static instance of the \doxylink{class_im_gui_app_1_1_app}{App} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for maintaining the life cycle of the application. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_im_gui_app_1_1_app_ac75a299d3414485f5cff06b929635b7a}\index{ImGuiApp::App@{ImGuiApp::App}!App@{App}}
+\index{App@{App}!ImGuiApp::App@{ImGuiApp::App}}
+\doxysubsubsection{\texorpdfstring{App()}{App()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_app_ac75a299d3414485f5cff06b929635b7a} 
+Im\+Gui\+App\+::\+App\+::\+App (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_im_gui_app_1_1_app_specification}{App\+Specification}} \&}]{app\+Specification}{ = {\ttfamily \mbox{\hyperlink{struct_im_gui_app_1_1_app_specification}{App\+Specification}}()}}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_im_gui_app_1_1_app}{App} object using the default \doxylink{struct_im_gui_app_1_1_app_specification}{App\+Specification} settings (name, window size) 
+
+\doxylink{class_im_gui_app_1_1_app}{App} class constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em app\+Specification} & \\
+\hline
+{\em app\+Specification} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_im_gui_app_1_1_app_aa7c0fb6ccc649302a334a96da755cfa3}\index{ImGuiApp::App@{ImGuiApp::App}!````~App@{\texorpdfstring{$\sim$}{\string~}App}}
+\index{````~App@{\texorpdfstring{$\sim$}{\string~}App}!ImGuiApp::App@{ImGuiApp::App}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}App()}{\string~App()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_app_aa7c0fb6ccc649302a334a96da755cfa3} 
+Im\+Gui\+App\+::\+App\+::\texorpdfstring{$\sim$}{\string~}\+App (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor of the \doxylink{class_im_gui_app_1_1_app}{App} object ensures the child class constructors are called before running. 
+
+Destroy the \doxylink{class_im_gui_app_1_1_app}{App}\+:\+: \doxylink{class_im_gui_app_1_1_app}{App} object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_im_gui_app_1_1_app_afc47dad7ca56374cde72116148ebb58f}\index{ImGuiApp::App@{ImGuiApp::App}!Get@{Get}}
+\index{Get@{Get}!ImGuiApp::App@{ImGuiApp::App}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_app_afc47dad7ca56374cde72116148ebb58f} 
+\mbox{\hyperlink{class_im_gui_app_1_1_app}{App}} \& Im\+Gui\+App\+::\+App\+::\+Get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns static instance of the \doxylink{class_im_gui_app_1_1_app}{App} object. 
+
+Returns reference to the current \doxylink{class_im_gui_app_1_1_app}{App} object instance stored by s\+\_\+\+Instance.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_im_gui_app_1_1_app}{App}\& 
+\end{DoxyReturn}
+\Hypertarget{class_im_gui_app_1_1_app_a5837b68d78df8b601205324d6fd5144d}\index{ImGuiApp::App@{ImGuiApp::App}!GetTime@{GetTime}}
+\index{GetTime@{GetTime}!ImGuiApp::App@{ImGuiApp::App}}
+\doxysubsubsection{\texorpdfstring{GetTime()}{GetTime()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_app_a5837b68d78df8b601205324d6fd5144d} 
+float Im\+Gui\+App\+::\+App\+::\+Get\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the time elapsed since the program started running (since GLFW was initialized) 
+
+\begin{DoxyReturn}{Returns}
+float time in seconds 
+\end{DoxyReturn}
+\Hypertarget{class_im_gui_app_1_1_app_abc34fed94848fa255e7db72305995ce7}\index{ImGuiApp::App@{ImGuiApp::App}!GetWindowHandle@{GetWindowHandle}}
+\index{GetWindowHandle@{GetWindowHandle}!ImGuiApp::App@{ImGuiApp::App}}
+\doxysubsubsection{\texorpdfstring{GetWindowHandle()}{GetWindowHandle()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_app_abc34fed94848fa255e7db72305995ce7} 
+GLFWwindow \texorpdfstring{$\ast$}{*} Im\+Gui\+App\+::\+App\+::\+Get\+Window\+Handle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the main Window Handle object of the application. 
+
+\begin{DoxyReturn}{Returns}
+GLFWwindow\texorpdfstring{$\ast$}{*} Pointer to the main Window of the application 
+\end{DoxyReturn}
+\Hypertarget{class_im_gui_app_1_1_app_a951ba2db6d88e3bff67065f538ffdabc}\index{ImGuiApp::App@{ImGuiApp::App}!PushLayer@{PushLayer}}
+\index{PushLayer@{PushLayer}!ImGuiApp::App@{ImGuiApp::App}}
+\doxysubsubsection{\texorpdfstring{PushLayer()}{PushLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_app_a951ba2db6d88e3bff67065f538ffdabc} 
+template$<$typename T $>$ \\
+void Im\+Gui\+App\+::\+App\+::\+Push\+Layer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enables addition of Im\+Gui frame items to the \doxylink{class_im_gui_app_1_1_app}{App} application object. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Instance of \doxylink{class_im_gui_app_1_1_layer}{Layer} object of the Im\+Gui frame being added \\
+\hline
+\end{DoxyTemplParams}
+\Hypertarget{class_im_gui_app_1_1_app_ac26ba1bb009b2a66eb27f05de4a096ed}\index{ImGuiApp::App@{ImGuiApp::App}!PushLayer@{PushLayer}}
+\index{PushLayer@{PushLayer}!ImGuiApp::App@{ImGuiApp::App}}
+\doxysubsubsection{\texorpdfstring{PushLayer()}{PushLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_app_ac26ba1bb009b2a66eb27f05de4a096ed} 
+void Im\+Gui\+App\+::\+App\+::\+Push\+Layer (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_im_gui_app_1_1_layer}{Layer}} $>$ \&}]{layer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enables addition of Im\+Gui frame items to the \doxylink{class_im_gui_app_1_1_app}{App} application object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer} & Instance of \doxylink{class_im_gui_app_1_1_layer}{Layer} object of the Im\+Gui frame being added \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_im_gui_app_1_1_app_a7c4336c7b471cd2a127172f98bd02f71}\index{ImGuiApp::App@{ImGuiApp::App}!Run@{Run}}
+\index{Run@{Run}!ImGuiApp::App@{ImGuiApp::App}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_app_a7c4336c7b471cd2a127172f98bd02f71} 
+void Im\+Gui\+App\+::\+App\+::\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Maintains the applications render "{}while"{} loop. 
+
+Maintains the applications render "{}while"{} loop Sourced from dependencies\textbackslash{}imgui-\/1.\+90.\+6-\/docking\textbackslash{}examples\textbackslash{}example\+\_\+glfw\+\_\+opengl3\textbackslash{}main.\+cpp with additions to enable maintaining of Im\+Gui frames contained in m\+\_\+\+Layer\+Stack. \Hypertarget{class_im_gui_app_1_1_app_a43b3453e27c92464dc60611c76ef6567}\index{ImGuiApp::App@{ImGuiApp::App}!SetMenubarCallback@{SetMenubarCallback}}
+\index{SetMenubarCallback@{SetMenubarCallback}!ImGuiApp::App@{ImGuiApp::App}}
+\doxysubsubsection{\texorpdfstring{SetMenubarCallback()}{SetMenubarCallback()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_app_a43b3453e27c92464dc60611c76ef6567} 
+void Im\+Gui\+App\+::\+App\+::\+Set\+Menubar\+Callback (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void()$>$ \&}]{menubar\+Callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enables addition of Im\+Gui\+::\+Menu\+Item objects to the \doxylink{class_im_gui_app_1_1_app}{App} application object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menubar\+Callback} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_app_8h}{App.\+h}}\item 
+\mbox{\hyperlink{_app_8cpp}{App.\+cpp}}\end{DoxyCompactItemize}

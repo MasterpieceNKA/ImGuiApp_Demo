@@ -1,0 +1,85 @@
+\chapter{Im\+Gui\+App Project}
+\hypertarget{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e}{}\label{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e}\index{ImGuiApp Project@{ImGuiApp Project}}
+\label{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e_autotoc_md0}%
+ \href{https://github.com/MasterpieceNKA/ImGuiApp}{\texttt{ Im\+Gui\+App}} provides some basic functionality needed to quickly create C++ gui applications using the GLFW and Open\+GL backends of \href{https://github.com/ocornut/imgui}{\texttt{ Dear Im\+Gui}}. \href{https://github.com/MasterpieceNKA/ImGuiApp}{\texttt{ Im\+Gui\+App}} uses CMake and has been tested on Windows 11 (Min\+GW \& Clang 18.\+1.\+5) and Linux (Ubuntu 22.\+04 with GNU 11.\+4.\+0 compiler). \href{https://github.com/MasterpieceNKA/ImGuiApp_Demo}{\texttt{ Im\+Gui\+App Demo Application}} is a sample application developed using this project.
+
+This project is inspired by \href{https://github.com/StudioCherno/Walnut}{\texttt{ Walnut}} which is built using uses Vulkan instead of Open\+GL.
+
+
+
+\href{https://github.com/MasterpieceNKA/ImGuiApp_Demo}{\texttt{ Im\+Gui\+App Demo Application}}
+
+
+
+\href{https://github.com/MasterpieceNKA/ImGuiApp_Demo}{\texttt{ Im\+Gui\+App Demo Application with undocked windows}}\hypertarget{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Requirements}{Requirements}}\label{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item \href{https://cmake.org/}{\texttt{ CMake}}
+\item \href{https://clang.llvm.org/}{\texttt{ Clang}} or \href{https://www.mingw-w64.org/}{\texttt{ Min\+GW}} (Windows) or Your favorite Linux C++ compile (Linux)
+\item IDE of choice \href{https://code.visualstudio.com/}{\texttt{ Visual Studio Code}} (tested) or \href{https://visualstudio.com}{\texttt{ Visual Studio 2022}} (not fully tested)
+\end{DoxyItemize}\hypertarget{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Getting Started}{Getting Started}}\label{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyEnumerate}
+\item Clone the repository
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ -\/-\/recursive\ https://github.com/MasterpieceNKA/ImGuiApp\_Demo.git}
+\DoxyCodeLine{}
+\DoxyCodeLine{cd\ ImGuiApp\_Demo}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyEnumerate}
+\item Build and run the project depending on Operating System
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item For Windows using provided Clang setup script
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.\(\backslash\)debugBuild\_clang.bat}
+
+\end{DoxyCode}
+
+\item For Windows using provided Min\+GW setup script
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.\(\backslash\)debugBuild\_MinGW.bat}
+
+\end{DoxyCode}
+
+\item For Linux build and run the project using
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ build\ \&\&\ cd\ build}
+\DoxyCodeLine{}
+\DoxyCodeLine{cmake\ ..}
+\DoxyCodeLine{}
+\DoxyCodeLine{cmake\ -\/-\/build\ .}
+\DoxyCodeLine{}
+\DoxyCodeLine{./bin/ImGuiApp\_Demo}
+
+\end{DoxyCode}
+
+\item Customise to your needs
+\end{DoxyItemize}\hypertarget{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{3rd party libaries}{3rd party libaries}}\label{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/ocornut/imgui}{\texttt{ Dear Im\+Gui}}
+\item \href{https://github.com/glfw/glfw}{\texttt{ GLFW}}
+\item \href{https://github.com/nigels-com/glew}{\texttt{ GLEW}}
+\item \href{https://github.com/g-truc/glm}{\texttt{ GLM}}
+\item \href{https://github.com/gabime/spdlog}{\texttt{ spdlog}}
+\end{DoxyItemize}\hypertarget{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Additional}{Additional}}\label{md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Im\+Gui\+App uses the \href{https://fonts.google.com/specimen/Roboto}{\texttt{ Roboto}} font (\href{https://www.apache.org/licenses/LICENSE-2.0}{\texttt{ Apache License, Version 2.\+0}})
+\item Documentation generated using \href{https://www.doxygen.nl/}{\texttt{ Doxygen}} 
+\end{DoxyItemize}

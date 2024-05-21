@@ -1,3 +1,13 @@
+/**
+ * @file OpenGLSampleLayer.h
+ * @author n.a (na@MasterpieceTechVideos.com)
+ * @brief Defines class for an OpenGL ImGui frame Layer
+ * @version 0.0.0
+ * @date 2024-05-20
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #pragma once
 #include <GL/glew.h> 
 //#include <GLFW/glfw3.h>
@@ -11,13 +21,19 @@
 #include <string>
 
 namespace ImGUIApp_Demo{
+    /**
+     * @brief Layer class definition of a simple ImGui frame that acts as an OpenGL window
+     * 
+     */
     class OpenGLSampleLayer : public ImGuiApp::Layer
     {
-    public: 
-        virtual ~OpenGLSampleLayer()
-        {
-
-        }
+    public:  
+        /**
+         * @brief Called after object has been added to m_LayerStack 
+         * of the App application instance. Creates triangle indices,
+         * shaders and buffers needed to render the OpenGL window.
+         * 
+         */
         virtual void OnAttach() override
         {
             ImGUIApp_Demo::DemoApp& m_App = static_cast<ImGUIApp_Demo::DemoApp&> (ImGuiApp::App::Get());
@@ -27,18 +43,23 @@ namespace ImGUIApp_Demo{
 	        create_shaders();
 	        create_framebuffer();
         }
-        
+        /**
+         * @brief Called when the App application instance is shutting down. 
+         * Deletes the OpenGL buffers and textures being used.
+         * 
+         */
         virtual void OnDetach() override
         {
             glDeleteFramebuffers(1, &FBO);
             glDeleteTextures(1, &texture_id);
             glDeleteRenderbuffers(1, &RBO);
-        }
-        
-        virtual void OnUpdate(float ts) override
-        {
-            
-        }
+        } 
+        /**
+         * @brief Called in the render loop within the ImGui::NewFrame(); and ImGui::End(); lines
+         * to render ImGui frame items. Draws texture on the ImGui frame Layer on which OpenGL shaders will render the 
+         * image.
+         * 
+         */
         virtual void OnUIRender() override
         {
             ImGui::Begin("OpenGL"); 
@@ -60,7 +81,11 @@ namespace ImGUIApp_Demo{
 
             ImGui::End();         
         }
-        
+        /**
+         * @brief Called after rendering loop ImGui frame items i.e. after ImGui::Render(); line.
+         * Binds buffers and uses defined shaders to render the OpenGL output.
+         * 
+         */
         virtual void OnPostUIRender() override
         {
             bind_framebuffer();
@@ -77,8 +102,13 @@ namespace ImGUIApp_Demo{
             
             unbind_framebuffer();	
         }
-    private:
+    public:
+        /**
+         * @brief Pointer to the DemoApp m_Color variable for updating the colour of the 
+         * triangle to be rendered. Updated by ColorPickerLayer.
+        */
         ImVec4* m_Color; 
+    private: 
         const GLint WIDTH = 400;
         const GLint HEIGHT = 300;
 

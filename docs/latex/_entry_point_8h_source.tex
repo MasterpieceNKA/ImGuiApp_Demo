@@ -1,0 +1,47 @@
+\doxysection{Entry\+Point.\+h}
+\hypertarget{_entry_point_8h_source}{}\label{_entry_point_8h_source}\index{EntryPoint.h@{EntryPoint.h}}
+\mbox{\hyperlink{_entry_point_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_app_8h}{App.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_logger_8h}{Logger.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_im_gui_app_1_1_app}{ImGuiApp::App}}*\ \mbox{\hyperlink{_app_8h_a2961b7a4fc9c1fe631bdf5a074147c3e}{ImGuiApp::CreateApp}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_entry_point_8h_a8bd72616f89083ec211da0e6613b6389}{g\_ApplicationRunning}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{namespace\ }ImGuiApp\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_entry_point_8h_a6a66c7d1ef2fe6c0932ed0ddd50e0394}{Main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv)}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_im_gui_app_1_1_logger_a44cc1b46c117ff6d70fa56dbb1b9641d}{ImGuiApp::Logger::Init}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{_entry_point_8h_a8bd72616f89083ec211da0e6613b6389}{g\_ApplicationRunning}})}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_im_gui_app_1_1_app}{ImGuiApp::App}}*\ app\ =\ \mbox{\hyperlink{_app_8h_a2961b7a4fc9c1fe631bdf5a074147c3e}{ImGuiApp::CreateApp}}(argc,\ argv);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ app-\/>\mbox{\hyperlink{class_im_gui_app_1_1_app_a7c4336c7b471cd2a127172f98bd02f71}{Run}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ app;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#if\ defined(IMGUIAPP\_DIST)\ \&\&\ defined(IMGUIAPP\_PLATFORM\_WINDOWS)}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ <Windows.h>}}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{int}\ APIENTRY\ WinMain(HINSTANCE\ hInst,\ HINSTANCE\ hInstPrev,\ PSTR\ cmdline,\ \textcolor{keywordtype}{int}\ cmdshow)}
+\DoxyCodeLine{00061\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_entry_point_8h_a6a66c7d1ef2fe6c0932ed0ddd50e0394}{ImGuiApp::Main}}(\_\_argc,\ \_\_argv);}
+\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv)}
+\DoxyCodeLine{00074\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ ImGuiApp::Main(argc,\ argv);}
+\DoxyCodeLine{00076\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ IMGUIAPP\_DIST\ \&\&\ IMGUIAPP\_PLATFORM\_WINDOWS}}
+
+\end{DoxyCode}

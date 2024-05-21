@@ -1,0 +1,76 @@
+\doxysection{Logger.\+h File Reference}
+\hypertarget{_logger_8h}{}\label{_logger_8h}\index{Logger.h@{Logger.h}}
+
+
+Defines the class for creating a logger class using spdlog.  
+
+
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_im_gui_app_1_1_logger}{Im\+Gui\+App\+::\+Logger}}
+\begin{DoxyCompactList}\small\item\em Class for performing logging function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_logger_8h_a164d4ce5cef3e4fe2e16922b97e4f428}\label{_logger_8h_a164d4ce5cef3e4fe2e16922b97e4f428} 
+\#define {\bfseries IGA\+\_\+\+CORE\+\_\+\+INFO}(...)~\mbox{\hyperlink{class_im_gui_app_1_1_logger_a38bf1bb5569d12bf91ec0088dc9fad61}{\+::\+Im\+Gui\+App\+::\+Logger\+::\+Get\+Core\+Logger}}()-\/$>$info(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Info level logger for the core Im\+Gui\+App app e.\+g. IGA\+\_\+\+CORE\+\_\+\+INFO("{}\+Core info message"{}) \end{DoxyCompactList}\item 
+\Hypertarget{_logger_8h_a789552bbad4cecbb7c7259b404d7c914}\label{_logger_8h_a789552bbad4cecbb7c7259b404d7c914} 
+\#define {\bfseries IGA\+\_\+\+CORE\+\_\+\+WARN}(...)~\mbox{\hyperlink{class_im_gui_app_1_1_logger_a38bf1bb5569d12bf91ec0088dc9fad61}{\+::\+Im\+Gui\+App\+::\+Logger\+::\+Get\+Core\+Logger}}()-\/$>$warn(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Warning level logger for the core Im\+Gui\+App app e.\+g. IGA\+\_\+\+CORE\+\_\+\+WARN("{}\+Core warning message"{}) \end{DoxyCompactList}\item 
+\Hypertarget{_logger_8h_ad459d145311abd443750739f9a134da8}\label{_logger_8h_ad459d145311abd443750739f9a134da8} 
+\#define {\bfseries IGA\+\_\+\+CORE\+\_\+\+ERROR}(...)~\mbox{\hyperlink{class_im_gui_app_1_1_logger_a38bf1bb5569d12bf91ec0088dc9fad61}{\+::\+Im\+Gui\+App\+::\+Logger\+::\+Get\+Core\+Logger}}()-\/$>$error(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Error level logger for the core Im\+Gui\+App app e.\+g. IGA\+\_\+\+CORE\+\_\+\+WARN("{}\+Core error message"{}) \end{DoxyCompactList}\item 
+\Hypertarget{_logger_8h_aa6469226a385c160a8874f68e85355a8}\label{_logger_8h_aa6469226a385c160a8874f68e85355a8} 
+\#define {\bfseries IGA\+\_\+\+INFO}(...)~\mbox{\hyperlink{class_im_gui_app_1_1_logger_a9c402d8b5dd9087388cab97cfddb2d4c}{\+::\+Im\+Gui\+App\+::\+Logger\+::\+Get\+Client\+Logger}}()-\/$>$info(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Info level logger for the client Im\+Gui\+App app e.\+g. IGA\+\_\+\+INFO("{}\+Client info message"{}) \end{DoxyCompactList}\item 
+\Hypertarget{_logger_8h_acb4a5242d78a5e1cf39cf8a1ac0b54e2}\label{_logger_8h_acb4a5242d78a5e1cf39cf8a1ac0b54e2} 
+\#define {\bfseries IGA\+\_\+\+WARN}(...)~\mbox{\hyperlink{class_im_gui_app_1_1_logger_a9c402d8b5dd9087388cab97cfddb2d4c}{\+::\+Im\+Gui\+App\+::\+Logger\+::\+Get\+Client\+Logger}}()-\/$>$warn(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Warning level logger for the client Im\+Gui\+App app e.\+g. IGA\+\_\+\+WARN("{}\+Client warning message"{}) \end{DoxyCompactList}\item 
+\Hypertarget{_logger_8h_a0f1c52bd6b256fe169653e4bc53654cf}\label{_logger_8h_a0f1c52bd6b256fe169653e4bc53654cf} 
+\#define {\bfseries IGA\+\_\+\+ERROR}(...)~\mbox{\hyperlink{class_im_gui_app_1_1_logger_a9c402d8b5dd9087388cab97cfddb2d4c}{\+::\+Im\+Gui\+App\+::\+Logger\+::\+Get\+Client\+Logger}}()-\/$>$error(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Error level logger for the client Im\+Gui\+App app e.\+g. IGA\+\_\+\+ERROR("{}\+Client error message"{}) \end{DoxyCompactList}\item 
+\Hypertarget{_logger_8h_a8d941aac3d8f3787c9b17b37151b6400}\label{_logger_8h_a8d941aac3d8f3787c9b17b37151b6400} 
+\#define {\bfseries IGA\+\_\+\+STRINGIFY\+\_\+\+MACRO}(macro)~\#macro
+\item 
+\Hypertarget{_logger_8h_a1f09a1a6dae63d83f6e5a8c5c85d730d}\label{_logger_8h_a1f09a1a6dae63d83f6e5a8c5c85d730d} 
+\#define {\bfseries IGA\+\_\+\+INTERNAL\+\_\+\+ASSERT\+\_\+\+IMPL}(type,  check,  msg, ...)~\{ if (!(check)) \{ IGA\#\#type\#\#ERROR(msg, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+); \+\_\+\+\_\+debugbreak(); \} \}
+\item 
+\Hypertarget{_logger_8h_a933b1b1df673f5b3a45078c45f57324b}\label{_logger_8h_a933b1b1df673f5b3a45078c45f57324b} 
+\#define {\bfseries IGA\+\_\+\+INTERNAL\+\_\+\+ASSERT\+\_\+\+WITH\+\_\+\+MSG}(type,  check, ...)~IGA\+\_\+\+INTERNAL\+\_\+\+ASSERT\+\_\+\+IMPL(type, check, "{}Assertion failed\+: \{0\}"{}, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\item 
+\Hypertarget{_logger_8h_a43ad6505e5598e64242d3f6864e39fed}\label{_logger_8h_a43ad6505e5598e64242d3f6864e39fed} 
+\#define {\bfseries IGA\+\_\+\+INTERNAL\+\_\+\+ASSERT\+\_\+\+WITH\+\_\+\+NO\+\_\+\+MSG}(type,  check, ...)~IGA\+\_\+\+INTERNAL\+\_\+\+ASSERT\+\_\+\+IMPL(type, check, "{}Assertion \textquotesingle{}\{0\}\textquotesingle{} failed at \{1\}\+:\{2\}"{}, IGA\+\_\+\+STRINGIFY\+\_\+\+MACRO(check), std\+::filesystem\+::path(\+\_\+\+\_\+\+FILE\+\_\+\+\_\+).filename().string(), \+\_\+\+\_\+\+LINE\+\_\+\+\_\+)
+\item 
+\Hypertarget{_logger_8h_a0598184137ebcf12706970010ac81cbb}\label{_logger_8h_a0598184137ebcf12706970010ac81cbb} 
+\#define {\bfseries IGA\+\_\+\+ASSERT\+\_\+\+GET\+\_\+\+MACRO\+\_\+\+NAME}(arg1,  arg2,  macro, ...)~macro
+\item 
+\Hypertarget{_logger_8h_a99c3d264b8abaf93fd5edf130582afcc}\label{_logger_8h_a99c3d264b8abaf93fd5edf130582afcc} 
+\#define {\bfseries IGA\+\_\+\+ASSERT\+\_\+\+GET\+\_\+\+MACRO}(...)~IGA\+\_\+\+ASSERT\+\_\+\+GET\+\_\+\+MACRO\+\_\+\+NAME(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+, IGA\+\_\+\+INTERNAL\+\_\+\+ASSERT\+\_\+\+WITH\+\_\+\+MSG, IGA\+\_\+\+INTERNAL\+\_\+\+ASSERT\+\_\+\+WITH\+\_\+\+NO\+\_\+\+MSG)
+\item 
+\Hypertarget{_logger_8h_ac1db8a1750ae801ee3593c15a1fc2f64}\label{_logger_8h_ac1db8a1750ae801ee3593c15a1fc2f64} 
+\#define {\bfseries IGA\+\_\+\+CORE\+\_\+\+ASSERT}(...)~IGA\+\_\+\+ASSERT\+\_\+\+GET\+\_\+\+MACRO(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)(\+\_\+\+CORE\+\_\+, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Assert macro for the core Im\+Gui\+App app e.\+g. \doxylink{_logger_8h_ac1db8a1750ae801ee3593c15a1fc2f64}{IGA\+\_\+\+CORE\+\_\+\+ASSERT(boolean\+\_\+evaluation)} \end{DoxyCompactList}\item 
+\Hypertarget{_logger_8h_a1654aa6e217f372da3eae31962a9642c}\label{_logger_8h_a1654aa6e217f372da3eae31962a9642c} 
+\#define {\bfseries IGA\+\_\+\+ASSERT}(...)~IGA\+\_\+\+ASSERT\+\_\+\+GET\+\_\+\+MACRO(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)(\+\_\+, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Assert macro for the client Im\+Gui\+App app e.\+g. \doxylink{_logger_8h_a1654aa6e217f372da3eae31962a9642c}{IGA\+\_\+\+ASSERT(boolean\+\_\+evaluation)} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the class for creating a logger class using spdlog. 
+
+\begin{DoxyAuthor}{Author}
+n.\+a (\href{mailto:na@MasterpieceTechVideos.com}{\texttt{ na@\+Masterpiece\+Tech\+Videos.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/05-\/20
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}

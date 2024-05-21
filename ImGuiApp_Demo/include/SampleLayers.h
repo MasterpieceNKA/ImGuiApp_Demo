@@ -1,3 +1,13 @@
+/**
+ * @file SampleLayers.h
+ * @author n.a (na@MasterpieceTechVideos.com)
+ * @brief Defines sample ImGui frame Layer classes
+ * @version 0.0.0
+ * @date 2024-05-20
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #pragma once
 #include <GL/glew.h> 
 //#include <GLFW/glfw3.h>
@@ -11,6 +21,10 @@
 #include <string>
 
 namespace ImGUIApp_Demo{
+    /**
+     * @brief Sample ImGui frame Layer object containing a Button
+     * 
+     */
     class ExampleLayer : public ImGuiApp::Layer
     {
     public: 
@@ -21,7 +35,10 @@ namespace ImGUIApp_Demo{
             ImGui::End(); 
         }
     };
-    
+    /**
+     * @brief Sample ImGui frame Layer class for rendering the ImGui Demo Window
+     * 
+     */
     class DemoWindowLayer : public ImGuiApp::Layer
     {
     public: 
@@ -30,6 +47,11 @@ namespace ImGUIApp_Demo{
             ImGui::ShowDemoWindow();
         }
     };
+    /**
+     * @brief Sample ImGui frame Layer class containing a colour picker for updating 
+     * the m_Color variable of the DemoApp application instance.
+     * 
+     */
     class ColorPickerLayer : public ImGuiApp::Layer
     {
     public: 
@@ -49,7 +71,7 @@ namespace ImGUIApp_Demo{
                                         ImGuiColorEditFlags_NoAlpha;
             //*/
             ///*
-            ImGuiColorEditFlags flags = ImGuiColorEditFlags_PickerHueWheel;
+            ImGuiColorEditFlags flags = ImGuiColorEditFlags_PickerHueWheel | ImGuiColorEditFlags_AlphaBar;
 
             ImGui::ColorPicker3("##MyColor##6", (float*)m_Color, flags);
             //*/
@@ -65,9 +87,9 @@ namespace ImGUIApp_Demo{
 
             ImGui::End(); 
         }
-    private:
-        ImVec4* m_Color;// = ImVec4(114.0f / 255.0f, 144.0f / 255.0f, 154.0f / 255.0f, 200.0f / 255.0f);
-        //ImGUIApp_Demo::DemoApp& m_App;
+    public:
+        /// @brief Pointer to the DemoApp m_Color variable for updating the colour
+        ImVec4* m_Color;
     };
 
 }

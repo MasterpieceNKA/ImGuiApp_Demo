@@ -1,0 +1,108 @@
+\doxysection{Im\+GUIApp\+\_\+\+Demo\+::Open\+GLSample\+Layer Class Reference}
+\hypertarget{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer}{}\label{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer}\index{ImGUIApp\_Demo::OpenGLSampleLayer@{ImGUIApp\_Demo::OpenGLSampleLayer}}
+
+
+Layer class definition of a simple Im\+Gui frame that acts as an Open\+GL window.  
+
+
+
+
+{\ttfamily \#include $<$Open\+GLSample\+Layer.\+h$>$}
+
+Inheritance diagram for Im\+GUIApp\+\_\+\+Demo\+::Open\+GLSample\+Layer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_ab65719f09b9e4bc5506e3d0a26271184}{On\+Attach}} () override
+\begin{DoxyCompactList}\small\item\em Called after object has been added to m\+\_\+\+Layer\+Stack of the App application instance. Creates triangle indices, shaders and buffers needed to render the Open\+GL window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_ac1c85c85af673bfc4d6f5e291b768547}{On\+Detach}} () override
+\begin{DoxyCompactList}\small\item\em Called when the App application instance is shutting down. Deletes the Open\+GL buffers and textures being used. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a2905ef9efc4d635fece1f00173510cb5}{On\+UIRender}} () override
+\begin{DoxyCompactList}\small\item\em Called in the render loop within the Im\+Gui\+::\+New\+Frame(); and Im\+Gui\+::\+End(); lines to render Im\+Gui frame items. Draws texture on the Im\+Gui frame Layer on which Open\+GL shaders will render the image. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a33d0b688e6b3de890c1694241b2d0377}{On\+Post\+UIRender}} () override
+\begin{DoxyCompactList}\small\item\em Called after rendering loop Im\+Gui frame items i.\+e. after Im\+Gui\+::\+Render(); line. Binds buffers and uses defined shaders to render the Open\+GL output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_im_gui_app_1_1_layer}{Im\+Gui\+App\+::\+Layer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Layer} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_im_gui_app_1_1_layer}{Layer} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_im_gui_app_1_1_layer_a35726c0ded8e8fbcb959586346145ab5}{On\+Update}} (float ts)
+\begin{DoxyCompactList}\small\item\em Called at the start of the render loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a55330789c14e148097ecaa612eb5c73f}\label{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a55330789c14e148097ecaa612eb5c73f} 
+Im\+Vec4 \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+\+Color}
+\begin{DoxyCompactList}\small\item\em Pointer to the \doxylink{class_im_g_u_i_app___demo_1_1_demo_app}{Demo\+App} m\+\_\+\+Color variable for updating the colour of the triangle to be rendered. Updated by \doxylink{class_im_g_u_i_app___demo_1_1_color_picker_layer}{Color\+Picker\+Layer}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Layer class definition of a simple Im\+Gui frame that acts as an Open\+GL window. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_ab65719f09b9e4bc5506e3d0a26271184}\index{ImGUIApp\_Demo::OpenGLSampleLayer@{ImGUIApp\_Demo::OpenGLSampleLayer}!OnAttach@{OnAttach}}
+\index{OnAttach@{OnAttach}!ImGUIApp\_Demo::OpenGLSampleLayer@{ImGUIApp\_Demo::OpenGLSampleLayer}}
+\doxysubsubsection{\texorpdfstring{OnAttach()}{OnAttach()}}
+{\footnotesize\ttfamily \label{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_ab65719f09b9e4bc5506e3d0a26271184} 
+virtual void Im\+GUIApp\+\_\+\+Demo\+::\+Open\+GLSample\+Layer\+::\+On\+Attach (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after object has been added to m\+\_\+\+Layer\+Stack of the App application instance. Creates triangle indices, shaders and buffers needed to render the Open\+GL window. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_im_gui_app_1_1_layer_a83daab955ac3eea2776f89a683eb5308}{Im\+Gui\+App\+::\+Layer}}.
+
+\Hypertarget{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_ac1c85c85af673bfc4d6f5e291b768547}\index{ImGUIApp\_Demo::OpenGLSampleLayer@{ImGUIApp\_Demo::OpenGLSampleLayer}!OnDetach@{OnDetach}}
+\index{OnDetach@{OnDetach}!ImGUIApp\_Demo::OpenGLSampleLayer@{ImGUIApp\_Demo::OpenGLSampleLayer}}
+\doxysubsubsection{\texorpdfstring{OnDetach()}{OnDetach()}}
+{\footnotesize\ttfamily \label{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_ac1c85c85af673bfc4d6f5e291b768547} 
+virtual void Im\+GUIApp\+\_\+\+Demo\+::\+Open\+GLSample\+Layer\+::\+On\+Detach (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the App application instance is shutting down. Deletes the Open\+GL buffers and textures being used. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_im_gui_app_1_1_layer_af110bc02b78d068476af9b8d1c16ea24}{Im\+Gui\+App\+::\+Layer}}.
+
+\Hypertarget{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a33d0b688e6b3de890c1694241b2d0377}\index{ImGUIApp\_Demo::OpenGLSampleLayer@{ImGUIApp\_Demo::OpenGLSampleLayer}!OnPostUIRender@{OnPostUIRender}}
+\index{OnPostUIRender@{OnPostUIRender}!ImGUIApp\_Demo::OpenGLSampleLayer@{ImGUIApp\_Demo::OpenGLSampleLayer}}
+\doxysubsubsection{\texorpdfstring{OnPostUIRender()}{OnPostUIRender()}}
+{\footnotesize\ttfamily \label{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a33d0b688e6b3de890c1694241b2d0377} 
+virtual void Im\+GUIApp\+\_\+\+Demo\+::\+Open\+GLSample\+Layer\+::\+On\+Post\+UIRender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called after rendering loop Im\+Gui frame items i.\+e. after Im\+Gui\+::\+Render(); line. Binds buffers and uses defined shaders to render the Open\+GL output. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_im_gui_app_1_1_layer_a4a6448c74ef23178abeccbd3c4b9d024}{Im\+Gui\+App\+::\+Layer}}.
+
+\Hypertarget{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a2905ef9efc4d635fece1f00173510cb5}\index{ImGUIApp\_Demo::OpenGLSampleLayer@{ImGUIApp\_Demo::OpenGLSampleLayer}!OnUIRender@{OnUIRender}}
+\index{OnUIRender@{OnUIRender}!ImGUIApp\_Demo::OpenGLSampleLayer@{ImGUIApp\_Demo::OpenGLSampleLayer}}
+\doxysubsubsection{\texorpdfstring{OnUIRender()}{OnUIRender()}}
+{\footnotesize\ttfamily \label{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a2905ef9efc4d635fece1f00173510cb5} 
+virtual void Im\+GUIApp\+\_\+\+Demo\+::\+Open\+GLSample\+Layer\+::\+On\+UIRender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called in the render loop within the Im\+Gui\+::\+New\+Frame(); and Im\+Gui\+::\+End(); lines to render Im\+Gui frame items. Draws texture on the Im\+Gui frame Layer on which Open\+GL shaders will render the image. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_im_gui_app_1_1_layer_afae27ec803185e61d9995b535a6ff215}{Im\+Gui\+App\+::\+Layer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_open_g_l_sample_layer_8h}{Open\+GLSample\+Layer.\+h}}\end{DoxyCompactItemize}

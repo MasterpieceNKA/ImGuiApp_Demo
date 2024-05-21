@@ -1,0 +1,88 @@
+\doxysection{Entry\+Point.\+h File Reference}
+\hypertarget{_entry_point_8h}{}\label{_entry_point_8h}\index{EntryPoint.h@{EntryPoint.h}}
+
+
+Defines the Entry point for the application responsible which is controls how the main function is run.  
+
+
+{\ttfamily \#include "{}App.\+h"{}}\newline
+{\ttfamily \#include "{}Logger.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_entry_point_8h_a1654aa6e217f372da3eae31962a9642c}\label{_entry_point_8h_a1654aa6e217f372da3eae31962a9642c} 
+\#define {\bfseries IGA\+\_\+\+ASSERT}(...)~IGA\+\_\+\+ASSERT\+\_\+\+GET\+\_\+\+MACRO(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)(\+\_\+, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_entry_point_8h_a6a66c7d1ef2fe6c0932ed0ddd50e0394}{Im\+Gui\+App\+::\+Main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em main function entry point \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_entry_point_8h_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Default main function definition. Usually runs with a console output depending on the operating system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_entry_point_8h_a8bd72616f89083ec211da0e6613b6389}\label{_entry_point_8h_a8bd72616f89083ec211da0e6613b6389} 
+bool {\bfseries g\+\_\+\+Application\+Running} = true
+\begin{DoxyCompactList}\small\item\em Flag indicating the running state of the App application instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the Entry point for the application responsible which is controls how the main function is run. 
+
+\begin{DoxyAuthor}{Author}
+n.\+a (\href{mailto:n.a@MasterpieceTechVideos.com}{\texttt{ n.\+a@\+Masterpiece\+Tech\+Videos.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/05-\/20
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_entry_point_8h_a6a66c7d1ef2fe6c0932ed0ddd50e0394}\index{EntryPoint.h@{EntryPoint.h}!Main@{Main}}
+\index{Main@{Main}!EntryPoint.h@{EntryPoint.h}}
+\doxysubsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily \label{_entry_point_8h_a6a66c7d1ef2fe6c0932ed0ddd50e0394} 
+int Im\+Gui\+App\+::\+Main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+
+
+main function entry point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & main function argument count \\
+\hline
+{\em argv} & main function argument vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int main function exit flag 
+\end{DoxyReturn}
+\Hypertarget{_entry_point_8h_a3c04138a5bfe5d72780bb7e82a18e627}\index{EntryPoint.h@{EntryPoint.h}!main@{main}}
+\index{main@{main}!EntryPoint.h@{EntryPoint.h}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_entry_point_8h_a3c04138a5bfe5d72780bb7e82a18e627} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+
+
+Default main function definition. Usually runs with a console output depending on the operating system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}

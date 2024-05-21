@@ -1,0 +1,242 @@
+\doxysection{Open\+GLSample\+Layer.\+h}
+\hypertarget{_open_g_l_sample_layer_8h_source}{}\label{_open_g_l_sample_layer_8h_source}\index{OpenGLSampleLayer.h@{OpenGLSampleLayer.h}}
+\mbox{\hyperlink{_open_g_l_sample_layer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <GL/glew.h>}\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\#include\ <GLFW/glfw3.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_app_8h}{App.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_layer_8h}{Layer.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_logger_8h}{Logger.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_demo_app_8h}{DemoApp.h}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }ImGUIApp\_Demo\{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer}{OpenGLSampleLayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_im_gui_app_1_1_layer}{ImGuiApp::Layer}}}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:\ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_ab65719f09b9e4bc5506e3d0a26271184}{OnAttach}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00038\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_app}{ImGUIApp\_Demo::DemoApp}}\&\ m\_App\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_app}{ImGUIApp\_Demo::DemoApp}}\&\textcolor{keyword}{>}\ (\mbox{\hyperlink{class_im_gui_app_1_1_app_afc47dad7ca56374cde72116148ebb58f}{ImGuiApp::App::Get}}());}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//ImGUIApp\_Demo::DemoApp\&\ m\_App\ =\ (ImGUIApp\_Demo::DemoApp\&)\ ImGuiApp::App::Get();}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a55330789c14e148097ecaa612eb5c73f}{m\_Color}}\ \ =\ \&m\_App.\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_app_ab3dda27a4a6d46edbbbcb3d487cd7f3d}{m\_Color}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ create\_triangle();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ create\_shaders();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ create\_framebuffer();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_ac1c85c85af673bfc4d6f5e291b768547}{OnDetach}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00052\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ glDeleteFramebuffers(1,\ \&FBO);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ glDeleteTextures(1,\ \&texture\_id);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ glDeleteRenderbuffers(1,\ \&RBO);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a2905ef9efc4d635fece1f00173510cb5}{OnUIRender}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00064\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::Begin(\textcolor{stringliteral}{"{}OpenGL"{}});\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ window\_width\ =\ ImGui::GetContentRegionAvail().x;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ window\_height\ =\ ImGui::GetContentRegionAvail().y;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ rescale\_framebuffer(window\_width,\ window\_height);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ glViewport(0,\ 0,\ window\_width,\ window\_height);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ ImVec2\ pos\ =\ ImGui::GetCursorScreenPos();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::GetWindowDrawList()-\/>AddImage(}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{void}\ *)texture\_id,\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImVec2(pos.x,\ pos.y),\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImVec2(pos.x\ +\ window\_width,\ pos.y\ +\ window\_height),\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImVec2(0,\ 1),\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImVec2(1,\ 0)}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::End();\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a33d0b688e6b3de890c1694241b2d0377}{OnPostUIRender}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00090\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ bind\_framebuffer();}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ glUseProgram(shader);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vertexColorLocation\ =\ glGetUniformLocation(shader,\ \textcolor{stringliteral}{"{}vertexColor"{}});\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ glUniform4f(vertexColorLocation,\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a55330789c14e148097ecaa612eb5c73f}{m\_Color}}-\/>x,\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a55330789c14e148097ecaa612eb5c73f}{m\_Color}}-\/>y,\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a55330789c14e148097ecaa612eb5c73f}{m\_Color}}-\/>z,\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a55330789c14e148097ecaa612eb5c73f}{m\_Color}}-\/>w);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ glBindVertexArray(VAO);}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ glDrawArrays(GL\_TRIANGLES,\ 0,\ 3);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ glBindVertexArray(0);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ glUseProgram(0);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ unbind\_framebuffer();\ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ ImVec4*\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer_a55330789c14e148097ecaa612eb5c73f}{m\_Color}};\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ GLint\ WIDTH\ =\ 400;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ GLint\ HEIGHT\ =\ 300;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ GLuint\ VAO;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ GLuint\ VBO;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ GLuint\ FBO;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ GLuint\ RBO;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ GLuint\ texture\_id;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ GLuint\ shader;}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ vertex\_shader\_code\ =\ R\textcolor{stringliteral}{"{}*(}}
+\DoxyCodeLine{00123\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \#version\ 330}}
+\DoxyCodeLine{00124\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00125\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ layout\ (location\ =\ 0)\ in\ vec3\ pos;\ }}
+\DoxyCodeLine{00126\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00127\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ void\ main()}}
+\DoxyCodeLine{00128\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{00129\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ gl\_Position\ =\ vec4(0.9*pos.x,\ 0.9*pos.y,\ 0.5*pos.z,\ 1.0);}}
+\DoxyCodeLine{00130\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00131\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ )*"{};}}
+\DoxyCodeLine{00132\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00133\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ }\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fragment\_shader\_code\ =\ R\textcolor{stringliteral}{"{}*(}}
+\DoxyCodeLine{00134\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \#version\ 330}}
+\DoxyCodeLine{00135\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00136\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ uniform\ vec4\ vertexColor;}}
+\DoxyCodeLine{00137\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ out\ vec4\ color;}}
+\DoxyCodeLine{00138\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00139\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ void\ main()}}
+\DoxyCodeLine{00140\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{00141\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ color\ =\ vertexColor;}}
+\DoxyCodeLine{00142\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00143\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ )*"{};}}
+\DoxyCodeLine{00144\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00145\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ }\textcolor{keywordtype}{void}\ create\_triangle()}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ GLfloat\ vertices[]\ =\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/1.0f,\ -\/1.0f,\ 0.0f,\ \textcolor{comment}{//\ 1.\ vertex\ x,\ y,\ z}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1.0f,\ -\/1.0f,\ 0.0f,\ \textcolor{comment}{//\ 2.\ vertex\ ...}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.0f,\ 1.0f,\ 0.0f\ \textcolor{comment}{//\ etc...\ }}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ glGenVertexArrays(1,\ \&VAO);}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ glBindVertexArray(VAO);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ glGenBuffers(1,\ \&VBO);}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ glBindBuffer(GL\_ARRAY\_BUFFER,\ VBO);}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ glBufferData(GL\_ARRAY\_BUFFER,\ \textcolor{keyword}{sizeof}(vertices),\ vertices,\ GL\_STATIC\_DRAW);}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ glVertexAttribPointer(0,\ 3,\ GL\_FLOAT,\ GL\_FALSE,\ 0,\ 0);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ glEnableVertexAttribArray(0);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ glBindBuffer(GL\_ARRAY\_BUFFER,\ 0);}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ glBindVertexArray(0);}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ add\_shader(GLuint\ program,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ shader\_code,\ GLenum\ type)\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ GLuint\ current\_shader\ =\ glCreateShader(type);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ GLchar*\ code[1];}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ code[0]\ =\ shader\_code;}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ GLint\ code\_length[1];}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ code\_length[0]\ =\ strlen(shader\_code);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ glShaderSource(current\_shader,\ 1,\ code,\ code\_length);}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ glCompileShader(current\_shader);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ GLint\ result\ =\ 0;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ GLchar\ log[1024]\ =\ \{0\};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ glGetShaderiv(current\_shader,\ GL\_COMPILE\_STATUS,\ \&result);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result)\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glGetShaderInfoLog(current\_shader,\ \textcolor{keyword}{sizeof}(log),\ NULL,\ log);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_logger_8h_a0f1c52bd6b256fe169653e4bc53654cf}{IGA\_ERROR}}(\textcolor{stringliteral}{"{}Error\ compiling\ "{}}\ +\ std::to\_string(type)\ +\ \textcolor{stringliteral}{"{}\ shader.\ "{}});\textcolor{comment}{//+std::to\_string(log));}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ glAttachShader(program,\ current\_shader);}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ create\_shaders()}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ shader\ =\ glCreateProgram();}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!shader)\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_logger_8h_a0f1c52bd6b256fe169653e4bc53654cf}{IGA\_ERROR}}(\textcolor{stringliteral}{"{}Error\ creating\ shader\ program!"{}});\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ add\_shader(shader,\ vertex\_shader\_code,\ GL\_VERTEX\_SHADER);}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ add\_shader(shader,\ fragment\_shader\_code,\ GL\_FRAGMENT\_SHADER);}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ GLint\ result\ =\ 0;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ GLchar\ log[1024]\ =\ \{0\};}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ glLinkProgram(shader);}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ glGetProgramiv(shader,\ GL\_LINK\_STATUS,\ \&result);}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result)\ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glGetProgramInfoLog(shader,\ \textcolor{keyword}{sizeof}(log),\ NULL,\ log);}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_logger_8h_a0f1c52bd6b256fe169653e4bc53654cf}{IGA\_ERROR}}(\textcolor{stringliteral}{"{}Error\ linking\ program:\ "{}});\textcolor{comment}{//\ +\ std::to\_string(log\ )+"{}"{});}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ glValidateProgram(shader);}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ glGetProgramiv(shader,\ GL\_VALIDATE\_STATUS,\ \&result);}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result)\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glGetProgramInfoLog(shader,\ \textcolor{keyword}{sizeof}(log),\ NULL,\ log);}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_logger_8h_a0f1c52bd6b256fe169653e4bc53654cf}{IGA\_ERROR}}(\textcolor{stringliteral}{"{}Error\ validating\ program:\ "{}});\textcolor{comment}{//\ +\ std::to\_string(log)+"{}"{});}}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ create\_framebuffer()}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ glGenFramebuffers(1,\ \&FBO);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ glBindFramebuffer(GL\_FRAMEBUFFER,\ FBO);}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ glGenTextures(1,\ \&texture\_id);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ glBindTexture(GL\_TEXTURE\_2D,\ texture\_id);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ glTexImage2D(GL\_TEXTURE\_2D,\ 0,\ GL\_RGB,\ WIDTH,\ HEIGHT,\ 0,\ GL\_RGB,\ GL\_UNSIGNED\_BYTE,\ NULL);}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ glTexParameteri(GL\_TEXTURE\_2D,\ GL\_TEXTURE\_MIN\_FILTER,\ GL\_LINEAR);}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ glTexParameteri(GL\_TEXTURE\_2D,\ GL\_TEXTURE\_MAG\_FILTER,\ GL\_LINEAR);}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ glFramebufferTexture2D(GL\_FRAMEBUFFER,\ GL\_COLOR\_ATTACHMENT0,\ GL\_TEXTURE\_2D,\ texture\_id,\ 0);}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ glGenRenderbuffers(1,\ \&RBO);}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ glBindRenderbuffer(GL\_RENDERBUFFER,\ RBO);}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ glRenderbufferStorage(GL\_RENDERBUFFER,\ GL\_DEPTH24\_STENCIL8,\ WIDTH,\ HEIGHT);}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ glFramebufferRenderbuffer(GL\_FRAMEBUFFER,\ GL\_DEPTH\_STENCIL\_ATTACHMENT,\ GL\_RENDERBUFFER,\ RBO);}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (glCheckFramebufferStatus(GL\_FRAMEBUFFER)\ !=\ GL\_FRAMEBUFFER\_COMPLETE)}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_logger_8h_a0f1c52bd6b256fe169653e4bc53654cf}{IGA\_ERROR}}(\textcolor{stringliteral}{"{}ERROR::FRAMEBUFFER::\ Framebuffer\ is\ not\ complete!"{}});}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ glBindFramebuffer(GL\_FRAMEBUFFER,\ 0);}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ glBindTexture(GL\_TEXTURE\_2D,\ 0);}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ glBindRenderbuffer(GL\_RENDERBUFFER,\ 0);}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ bind\_framebuffer()}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ glBindFramebuffer(GL\_FRAMEBUFFER,\ FBO);}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ unbind\_framebuffer()}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ glBindFramebuffer(GL\_FRAMEBUFFER,\ 0);}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ rescale\_framebuffer(\textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height)}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ glBindTexture(GL\_TEXTURE\_2D,\ texture\_id);}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ glTexImage2D(GL\_TEXTURE\_2D,\ 0,\ GL\_RGB,\ width,\ height,\ 0,\ GL\_RGB,\ GL\_UNSIGNED\_BYTE,\ NULL);}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ glTexParameteri(GL\_TEXTURE\_2D,\ GL\_TEXTURE\_MIN\_FILTER,\ GL\_LINEAR);}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ glTexParameteri(GL\_TEXTURE\_2D,\ GL\_TEXTURE\_MAG\_FILTER,\ GL\_LINEAR);}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ glFramebufferTexture2D(GL\_FRAMEBUFFER,\ GL\_COLOR\_ATTACHMENT0,\ GL\_TEXTURE\_2D,\ texture\_id,\ 0);}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ glBindRenderbuffer(GL\_RENDERBUFFER,\ RBO);}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ glRenderbufferStorage(GL\_RENDERBUFFER,\ GL\_DEPTH24\_STENCIL8,\ width,\ height);}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ glFramebufferRenderbuffer(GL\_FRAMEBUFFER,\ GL\_DEPTH\_STENCIL\_ATTACHMENT,\ GL\_RENDERBUFFER,\ RBO);}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \ \ \};}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \ \ \ }
+\DoxyCodeLine{00275\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,45 @@
+\doxysection{Logger.\+h}
+\hypertarget{_logger_8h_source}{}\label{_logger_8h_source}\index{Logger.h@{Logger.h}}
+\mbox{\hyperlink{_logger_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once\ }}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <spdlog/spdlog.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }ImGuiApp}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_im_gui_app_1_1_logger}{Logger}}}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_app_1_1_logger_a44cc1b46c117ff6d70fa56dbb1b9641d}{Init}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<spdlog::logger>\ \mbox{\hyperlink{class_im_gui_app_1_1_logger_a38bf1bb5569d12bf91ec0088dc9fad61}{GetCoreLogger}}()\ \{\ \textcolor{keywordflow}{return}\ m\_CoreLogger;\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<spdlog::logger>\ \mbox{\hyperlink{class_im_gui_app_1_1_logger_a9c402d8b5dd9087388cab97cfddb2d4c}{GetClientLogger}}()\ \{\ \textcolor{keywordflow}{return}\ m\_ClientLogger;\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<spdlog::logger>\ m\_CoreLogger;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<spdlog::logger>\ m\_ClientLogger;}
+\DoxyCodeLine{00037\ \ \ \ \ \};}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ IGA\_CORE\_INFO(...)\ ::ImGuiApp::Logger::GetCoreLogger()-\/>info(\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ IGA\_CORE\_WARN(...)\ ::ImGuiApp::Logger::GetCoreLogger()-\/>warn(\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ IGA\_CORE\_ERROR(...)\ ::ImGuiApp::Logger::GetCoreLogger()-\/>error(\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ IGA\_INFO(...)\ ::ImGuiApp::Logger::GetClientLogger()-\/>info(\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ IGA\_WARN(...)\ ::ImGuiApp::Logger::GetClientLogger()-\/>warn(\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ IGA\_ERROR(...)\ ::ImGuiApp::Logger::GetClientLogger()-\/>error(\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ IGA\_STRINGIFY\_MACRO(macro)\ \#macro}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ IGA\_INTERNAL\_ASSERT\_IMPL(type,\ check,\ msg,\ ...)\ \{\ if\ (!(check))\ \{\ IGA\#\#type\#\#ERROR(msg,\ \_\_VA\_ARGS\_\_);\ \_\_debugbreak();\ \}\ \}}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ IGA\_INTERNAL\_ASSERT\_WITH\_MSG(type,\ check,\ ...)\ IGA\_INTERNAL\_ASSERT\_IMPL(type,\ check,\ "{}Assertion\ failed:\ \{0\}"{},\ \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ IGA\_INTERNAL\_ASSERT\_WITH\_NO\_MSG(type,\ check,\ ...)\ IGA\_INTERNAL\_ASSERT\_IMPL(type,\ check,\ "{}Assertion\ '\{0\}'\ failed\ at\ \{1\}:\{2\}"{},\ IGA\_STRINGIFY\_MACRO(check),\ std::filesystem::path(\_\_FILE\_\_).filename().string(),\ \_\_LINE\_\_)}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ IGA\_ASSERT\_GET\_MACRO\_NAME(arg1,\ arg2,\ macro,\ ...)\ macro}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ IGA\_ASSERT\_GET\_MACRO(...)\ IGA\_ASSERT\_GET\_MACRO\_NAME(\_\_VA\_ARGS\_\_,\ IGA\_INTERNAL\_ASSERT\_WITH\_MSG,\ IGA\_INTERNAL\_ASSERT\_WITH\_NO\_MSG)}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ IGA\_CORE\_ASSERT(...)\ IGA\_ASSERT\_GET\_MACRO(\_\_VA\_ARGS\_\_)(\_CORE\_,\ \_\_VA\_ARGS\_\_)\ }}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ IGA\_ASSERT(...)\ IGA\_ASSERT\_GET\_MACRO(\_\_VA\_ARGS\_\_)(\_,\ \_\_VA\_ARGS\_\_)}}
+
+\end{DoxyCode}

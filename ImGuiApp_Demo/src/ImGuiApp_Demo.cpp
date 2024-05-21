@@ -1,3 +1,13 @@
+/**
+ * @file ImGuiApp_Demo.cpp
+ * @author n.a (na@MasterpieceTechVideos.com)
+ * @brief Definition of the application to run in the main function defined in the EntryPoint (EntryPoint.h)
+ * @version 0.0.0
+ * @date 2024-05-20
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "EntryPoint.h"
 #include "App.h" 
 
@@ -7,6 +17,13 @@
 
 #include <string> 
 
+/**
+ * @brief Implementation of the CreateApp function for creating the static App class instance to run.
+ * 
+ * @param argc 
+ * @param argv 
+ * @return ImGuiApp::App* 
+ */
 ImGuiApp::App* ImGuiApp::CreateApp(int argc, char** argv)
 {
 	ImGuiApp::AppSpecification spec;
