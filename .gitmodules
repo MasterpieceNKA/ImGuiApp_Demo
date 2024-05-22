@@ -1,4 +1,4 @@
 [submodule "ImGuiApp"]
 	path = ImGuiApp
 	url = https://github.com/MasterpieceNKA/ImGuiApp.git
-	branch = main
+	branch = cmake_branch
