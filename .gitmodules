@@ -2,3 +2,6 @@
 	path = ImGuiApp
 	url = https://github.com/MasterpieceNKA/ImGuiApp.git
 	branch = main
+[submodule "vcpkg"]
+	path = vcpkg
+	url = https://github.com/microsoft/vcpkg.git

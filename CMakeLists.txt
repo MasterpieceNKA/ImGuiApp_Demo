@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
 
+if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+    set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_LIST_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake)
+    MESSAGE(STATUS "Setting CMAKE_TOOLCHAIN_FILE in root : ${CMAKE_TOOLCHAIN_FILE}")
+endif() 
+
 project(ImGuiApp_Demo LANGUAGES CXX)
+
 if(NOT DEFINED CMAKE_CXX_STANDARD)
 	set(CMAKE_CXX_STANDARD 17)
 endif()
