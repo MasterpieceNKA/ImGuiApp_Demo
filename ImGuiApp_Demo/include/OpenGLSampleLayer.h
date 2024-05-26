@@ -14,7 +14,7 @@
 
 #include "App.h"
 #include "Layer.h"
-#include "Logger.h"
+#include "IGA_Logger.h"
 
 #include "DemoApp.h"
 
@@ -90,7 +90,6 @@ namespace ImGUIApp_Demo{
         {
             bind_framebuffer();
             glClearColor(0.05f, 0.05f, 0.05f, 1.0f);
-            
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		
             glUseProgram(shader);

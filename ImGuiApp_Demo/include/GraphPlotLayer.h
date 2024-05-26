@@ -5,7 +5,7 @@
 
 #include "App.h"
 #include "Layer.h"
-#include "Logger.h"
+#include "IGA_Logger.h"
 
 #include "DemoApp.h"
 
