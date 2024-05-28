@@ -123,15 +123,11 @@ Getting Started</h1>
 <div class="line"> </div>
 <div class="line">cd ImGuiApp_Demo</div>
 </div><!-- fragment --><ol type="1">
+<li>Initialise vcpkg by running the bootstraping script depending on your operating system. <code>.\vcpkg\bootstrap-vcpkg.bat</code> ( on Windows), <div class="fragment"><div class="line">\bootstrap-vcpkg.sh</div>
+</div><!-- fragment --> (on Linux)</li>
 <li>Build and run the project depending on Operating System</li>
 </ol>
 <ul>
-<li><p class="startli">For Windows using provided Clang setup script</p>
-<div class="fragment"><div class="line">.\debugBuild_clang.bat</div>
-</div><!-- fragment --></li>
-<li><p class="startli">For Windows using provided MinGW setup script</p>
-<div class="fragment"><div class="line">.\debugBuild_MinGW.bat</div>
-</div><!-- fragment --></li>
 <li><p class="startli">For Windows or Linux build and run the project using</p>
 <div class="fragment"><div class="line">mkdir build &amp;&amp; cd build</div>
 <div class="line"> </div>
@@ -141,8 +137,14 @@ Getting Started</h1>
 <div class="line"> </div>
 <div class="line">./bin/ImGuiApp_Demo</div>
 </div><!-- fragment --></li>
-<li>Customise and use other project structures according to your needs</li>
+<li><p class="startli">Or using provided scripts for Windows using either Clang or MinGW</p>
+<div class="fragment"><div class="line">.\debugBuild_clang.bat</div>
+</div><!-- fragment --><div class="fragment"><div class="line">.\debugBuild_MinGW.bat</div>
+</div><!-- fragment --></li>
 </ul>
+<ol type="1">
+<li>Customise and use other project structures according to your needs</li>
+</ol>
 <p><img src="figures/fig_4.png" alt="Example project structure setups for using ImGuiApp" class="inline"/></p>
 <p>Example project structure setups for using ImGuiApp</p>
 <h1><a class="anchor" id="autotoc_md9"></a>

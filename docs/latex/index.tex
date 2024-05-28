@@ -37,25 +37,15 @@ Im\+Gui\+App Demo Application with undocked windows\hypertarget{index_autotoc_md
 
 
 \begin{DoxyEnumerate}
+\item Initialise vcpkg by running the bootstraping script depending on your operating system. {\ttfamily .\textbackslash{}vcpkg\textbackslash{}bootstrap-\/vcpkg.\+bat} ( on Windows), 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\(\backslash\)bootstrap-\/vcpkg.sh}
+
+\end{DoxyCode}
+ (on Linux)
 \item Build and run the project depending on Operating System
 \end{DoxyEnumerate}
 \begin{DoxyItemize}
-\item For Windows using provided Clang setup script
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{.\(\backslash\)debugBuild\_clang.bat}
-
-\end{DoxyCode}
-
-\item For Windows using provided Min\+GW setup script
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{.\(\backslash\)debugBuild\_MinGW.bat}
-
-\end{DoxyCode}
-
 \item For Windows or Linux build and run the project using
 
 
@@ -70,8 +60,25 @@ Im\+Gui\+App Demo Application with undocked windows\hypertarget{index_autotoc_md
 
 \end{DoxyCode}
 
-\item Customise and use other project structures according to your needs
+\item Or using provided scripts for Windows using either Clang or Min\+GW
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.\(\backslash\)debugBuild\_clang.bat}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.\(\backslash\)debugBuild\_MinGW.bat}
+
+\end{DoxyCode}
+
 \end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Customise and use other project structures according to your needs
+\end{DoxyEnumerate}
 
 
 

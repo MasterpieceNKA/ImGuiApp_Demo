@@ -33,17 +33,13 @@ git clone --recursive https://github.com/MasterpieceNKA/ImGuiApp_Demo.git
 cd ImGuiApp_Demo
 ``` 
 
-2. Build and run the project depending on Operating System
-- For Windows using provided Clang setup script
+2. Initialise vcpkg by running the bootstraping script depending on your operating system.  ```.\vcpkg\bootstrap-vcpkg.bat``` ( on Windows), 
+ ```vcpkg\bootstrap-vcpkg.sh``` (on Linux)
 
-    ```
-    .\debugBuild_clang.bat
-    ``` 
-- For Windows using provided MinGW setup script
 
-    ```
-    .\debugBuild_MinGW.bat
-    ``` 
+
+3. Build and run the project depending on Operating System
+
 - For Windows or Linux build and run the project using 
 
     ```
@@ -55,8 +51,17 @@ cd ImGuiApp_Demo
 
     ./bin/ImGuiApp_Demo
     ``` 
+- Or using provided scripts for Windows using either Clang  or MinGW 
+
+    ```
+    .\debugBuild_clang.bat
+    ```  
+
+    ```
+    .\debugBuild_MinGW.bat
+    ``` 
     
-- Customise and use other project structures according to your needs
+4. Customise and use other project structures according to your needs
 
 ![Example project structure setups for using ImGuiApp](figures/fig_4.png)
 
