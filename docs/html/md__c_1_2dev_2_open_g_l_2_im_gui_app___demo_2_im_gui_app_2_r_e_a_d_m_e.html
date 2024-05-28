@@ -101,11 +101,7 @@ $(function(){initNavTree('md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_a
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> <a href="https://github.com/MasterpieceNKA/ImGuiApp">ImGuiApp</a> provides some basic functionality needed to quickly create C++ gui applications using the GLFW and OpenGL backends of <a href="https://github.com/ocornut/imgui">Dear ImGui</a>. <a href="https://github.com/MasterpieceNKA/ImGuiApp">ImGuiApp</a> uses CMake and has been tested on Windows 11 (MinGW &amp; Clang 18.1.5) and Linux (Ubuntu 22.04 with GNU 11.4.0 compiler). <a href="https://github.com/MasterpieceNKA/ImGuiApp_Demo">ImGuiApp Demo Application</a> is a sample application developed using this project.</p>
-<p>This project is inspired by <a href="https://github.com/StudioCherno/Walnut">Walnut</a> which is built using uses Vulkan instead of OpenGL.</p>
-<p><img src="figures/fig_1.png" alt="Image of ImGuiApp Demo" class="inline"/></p>
-<p><a href="https://github.com/MasterpieceNKA/ImGuiApp_Demo">ImGuiApp Demo Application</a></p>
-<p><img src="figures/fig_2.png" alt="Image of ImGuiApp Demo with undocked windows" class="inline"/></p>
-<p><a href="https://github.com/MasterpieceNKA/ImGuiApp_Demo">ImGuiApp Demo Application with undocked windows</a></p>
+<p>This project is inspired by <a href="https://github.com/StudioCherno/Walnut">Walnut</a> which uses Vulkan instead of OpenGL.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Requirements</h1>
 <ul>
@@ -116,33 +112,29 @@ Requirements</h1>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Getting Started</h1>
 <ol type="1">
-<li>Clone the repository</li>
+<li>Run <code>git init</code> at the root folder of your project if you already havent done so.</li>
+<li>Add ImGuiApp as a submodule of your project either in the root folder of your project <div class="fragment"><div class="line">git submodule add https://github.com/MasterpieceNKA/ImGuiApp.git </div>
+</div><!-- fragment --> or in a folder where your other dependencies are located <div class="fragment"><div class="line">git submodule add https://github.com/MasterpieceNKA/ImGuiApp.git dependencies/ImGuiApp</div>
+</div><!-- fragment --></li>
+<li>Add ImGuiApp subdirectory to your CMakeLists.txt file eg. if you added ImGuiApp to your root folder use <div class="fragment"><div class="line">add_subdirectory(ImGuiApp)</div>
+</div><!-- fragment --></li>
+<li>Include ImGuiApp headers to your include directories <div class="fragment"><div class="line">include_directories(${ImGuiApp_INCLUDE_DIR})</div>
+</div><!-- fragment --></li>
+<li>Link ImGuiApp to your project <div class="fragment"><div class="line">target_link_libraries(&lt;your executable&#39;s name&gt; PUBLIC ImGuiApp)</div>
+</div><!-- fragment --></li>
 </ol>
-<div class="fragment"><div class="line">git clone --recursive https://github.com/MasterpieceNKA/ImGuiApp_Demo.git</div>
-<div class="line"> </div>
-<div class="line">cd ImGuiApp_Demo</div>
-</div><!-- fragment --><ol type="1">
-<li>Build and run the project depending on Operating System</li>
-</ol>
-<ul>
-<li><p class="startli">For Windows using provided Clang setup script</p>
-<div class="fragment"><div class="line">.\debugBuild_clang.bat</div>
-</div><!-- fragment --></li>
-<li><p class="startli">For Windows using provided MinGW setup script</p>
-<div class="fragment"><div class="line">.\debugBuild_MinGW.bat</div>
-</div><!-- fragment --></li>
-<li><p class="startli">For Linux build and run the project using</p>
-<div class="fragment"><div class="line">mkdir build &amp;&amp; cd build</div>
-<div class="line"> </div>
-<div class="line">cmake ..</div>
-<div class="line"> </div>
-<div class="line">cmake --build .</div>
-<div class="line"> </div>
-<div class="line">./bin/ImGuiApp_Demo</div>
-</div><!-- fragment --></li>
-<li>Customise to your needs</li>
-</ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
+Sample ImGuiApp project setup</h1>
+<p><a href="https://github.com/MasterpieceNKA/ImGuiApp_Demo.git">ImGuiApp_Demo</a> is a sample project setup that uses ImGuiApp.</p>
+<p><img src="figures/fig_1.png" alt="Image of ImGuiApp Demo" class="inline"/></p>
+<p><a href="https://github.com/MasterpieceNKA/ImGuiApp_Demo">ImGuiApp Demo Application</a></p>
+<p><img src="figures/fig_2.png" alt="Image of ImGuiApp Demo with undocked windows" class="inline"/></p>
+<p><a href="https://github.com/MasterpieceNKA/ImGuiApp_Demo">ImGuiApp Demo Application with undocked windows</a></p>
+<p><img src="figures/fig_3.png" alt="Image of ImGuiApp Demo" class="inline"/></p>
+<p><a href="https://github.com/MasterpieceNKA/ImGuiApp_Demo">ImGuiApp Demo Application 2</a></p>
+<p><img src="figures/fig_4.png" alt="Image of ImGuiApp sample project structures" class="inline"/></p>
+<p><a href="https://github.com/MasterpieceNKA/ImGuiApp_Demo">Image of ImGuiApp sample project structures</a></p>
+<h1><a class="anchor" id="autotoc_md4"></a>
 3rd party libaries</h1>
 <ul>
 <li><a href="https://github.com/ocornut/imgui">Dear ImGui</a></li>
@@ -150,8 +142,9 @@ Getting Started</h1>
 <li><a href="https://github.com/nigels-com/glew">GLEW</a></li>
 <li><a href="https://github.com/g-truc/glm">GLM</a></li>
 <li><a href="https://github.com/gabime/spdlog">spdlog</a></li>
+<li><a href="https://github.com/microsoft/vcpkg">vcpkg</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Additional</h1>
 <ul>
 <li>ImGuiApp uses the <a href="https://fonts.google.com/specimen/Roboto">Roboto</a> font (<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>)</li>

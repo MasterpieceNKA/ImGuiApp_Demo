@@ -9,69 +9,72 @@
 \DoxyCodeLine{00014\ }
 \DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_app_8h}{App.h}}"{}}}
 \DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_layer_8h}{Layer.h}}"{}}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_logger_8h}{Logger.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}IGA\_Logger.h"{}}}
 \DoxyCodeLine{00018\ }
 \DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_demo_app_8h}{DemoApp.h}}"{}}}
 \DoxyCodeLine{00020\ }
 \DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }ImGUIApp\_Demo\{}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_example_layer}{ExampleLayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_im_gui_app_1_1_layer}{ImGuiApp::Layer}}}
-\DoxyCodeLine{00029\ \ \ \ \ \{}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:\ }
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_example_layer_a85505f582001b5a97c412d24257a7057}{OnUIRender}}()\textcolor{keyword}{\ override}}
-\DoxyCodeLine{00032\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::Begin(\textcolor{stringliteral}{"{}Hello"{}});\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::Button(\textcolor{stringliteral}{"{}Button"{}});}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::End();\ }
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00037\ \ \ \ \ \};}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_window_layer}{DemoWindowLayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_im_gui_app_1_1_layer}{ImGuiApp::Layer}}}
-\DoxyCodeLine{00043\ \ \ \ \ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{public}:\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_window_layer_acce4957ac844206557ee450067d60476}{OnUIRender}}()\textcolor{keyword}{\ override}}
-\DoxyCodeLine{00046\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::ShowDemoWindow();}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00049\ \ \ \ \ \};}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer}{ColorPickerLayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_im_gui_app_1_1_layer}{ImGuiApp::Layer}}}
-\DoxyCodeLine{00056\ \ \ \ \ \{}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{public}:\ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a8e3771dd04437f55a53cb50a1954521f}{OnAttach}}()\ \{}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_app}{ImGUIApp\_Demo::DemoApp}}\&\ m\_App\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_app}{ImGUIApp\_Demo::DemoApp}}\&\textcolor{keyword}{>}\ (\mbox{\hyperlink{class_im_gui_app_1_1_app_afc47dad7ca56374cde72116148ebb58f}{ImGuiApp::App::Get}}());}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//ImGUIApp\_Demo::DemoApp\&\ m\_App\ =\ (ImGUIApp\_Demo::DemoApp\&)\ ImGuiApp::App::Get();}}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a7a5c64746bba2f19a1dbcbed3c1edab5}{m\_Color}}\ \ =\ \&m\_App.\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_app_ab3dda27a4a6d46edbbbcb3d487cd7f3d}{m\_Color}};}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a233507a5cfa8f3e7ab32cfba0da52acd}{OnUIRender}}()\textcolor{keyword}{\ override}}
-\DoxyCodeLine{00065\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::Begin(\textcolor{stringliteral}{"{}ImGuiApp\ Color\ Picker"{}});\ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
-\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ImGuiColorEditFlags\ flags\ =\ ImGuiColorEditFlags\_PickerHueWheel\ |\ }}
-\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGuiColorEditFlags\_NoSidePreview\ |\ }}
-\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGuiColorEditFlags\_NoInputs\ |\ }}
-\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGuiColorEditFlags\_NoAlpha;}}
-\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //*/}}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ ImGuiColorEditFlags\ flags\ =\ ImGuiColorEditFlags\_PickerHueWheel\ |\ ImGuiColorEditFlags\_AlphaBar;}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::ColorPicker3(\textcolor{stringliteral}{"{}\#\#MyColor\#\#6"{}},\ (\textcolor{keywordtype}{float}*)\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a7a5c64746bba2f19a1dbcbed3c1edab5}{m\_Color}},\ flags);}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//*/}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}pbPlots.hpp"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}supportLib.hpp"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{namespace\ }ImGUIApp\_Demo\{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_example_layer}{ExampleLayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_im_gui_app_1_1_layer}{ImGuiApp::Layer}}}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_example_layer_a85505f582001b5a97c412d24257a7057}{OnUIRender}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00035\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::Begin(\textcolor{stringliteral}{"{}Hello"{}});\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::Button(\textcolor{stringliteral}{"{}Button"{}});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::End();\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_window_layer}{DemoWindowLayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_im_gui_app_1_1_layer}{ImGuiApp::Layer}}}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_window_layer_acce4957ac844206557ee450067d60476}{OnUIRender}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00049\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::ShowDemoWindow();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer}{ColorPickerLayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_im_gui_app_1_1_layer}{ImGuiApp::Layer}}}
+\DoxyCodeLine{00059\ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a8e3771dd04437f55a53cb50a1954521f}{OnAttach}}()\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_app}{ImGUIApp\_Demo::DemoApp}}\&\ m\_App\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_app}{ImGUIApp\_Demo::DemoApp}}\&\textcolor{keyword}{>}\ (\mbox{\hyperlink{class_im_gui_app_1_1_app_afc47dad7ca56374cde72116148ebb58f}{ImGuiApp::App::Get}}());}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//ImGUIApp\_Demo::DemoApp\&\ m\_App\ =\ (ImGUIApp\_Demo::DemoApp\&)\ ImGuiApp::App::Get();}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a7a5c64746bba2f19a1dbcbed3c1edab5}{m\_Color}}\ \ =\ \&m\_App.\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_demo_app_ab3dda27a4a6d46edbbbcb3d487cd7f3d}{m\_Color}};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a233507a5cfa8f3e7ab32cfba0da52acd}{OnUIRender}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00068\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::Begin(\textcolor{stringliteral}{"{}ImGuiApp\ Color\ Picker"{}});\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ImGuiColorEditFlags\ flags\ =\ ImGuiColorEditFlags\_PickerHueWheel\ |\ }}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGuiColorEditFlags\_NoSidePreview\ |\ }}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGuiColorEditFlags\_NoInputs\ |\ }}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ImGuiColorEditFlags\_NoAlpha;}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //*/}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ ImGuiColorEditFlags\ flags\ =\ ImGuiColorEditFlags\_PickerHueWheel\ |\ ImGuiColorEditFlags\_AlphaBar;}
 \DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
-\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ float\ w\ =\ (ImGui::GetContentRegionAvail().x\ -\/\ ImGui::GetStyle().ItemSpacing.y)\ *\ 0.40f;}}
-\DoxyCodeLine{00081\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ImGui::SetNextItemWidth(w);}}
-\DoxyCodeLine{00082\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ImGui::ColorPicker3("{}\#\#MyColor\#\#5"{},\ (float*)m\_Color,\ ImGuiColorEditFlags\_PickerHueBar\ |\ ImGuiColorEditFlags\_NoSidePreview\ |\ ImGuiColorEditFlags\_NoInputs\ |\ ImGuiColorEditFlags\_NoAlpha);}}
-\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ImGui::SameLine();}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::ColorPicker3(\textcolor{stringliteral}{"{}\#\#MyColor\#\#6"{}},\ (\textcolor{keywordtype}{float}*)\mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a7a5c64746bba2f19a1dbcbed3c1edab5}{m\_Color}},\ flags);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//*/}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ float\ w\ =\ (ImGui::GetContentRegionAvail().x\ -\/\ ImGui::GetStyle().ItemSpacing.y)\ *\ 0.40f;}}
 \DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ImGui::SetNextItemWidth(w);}}
-\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ImGui::ColorPicker3("{}\#\#MyColor\#\#6"{},\ (float*)m\_Color,\ ImGuiColorEditFlags\_PickerHueWheel\ |\ ImGuiColorEditFlags\_NoSidePreview\ |\ ImGuiColorEditFlags\_NoInputs\ |\ ImGuiColorEditFlags\_NoAlpha);}}
-\DoxyCodeLine{00086\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //*/}}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::End();\ }
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ ImVec4*\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a7a5c64746bba2f19a1dbcbed3c1edab5}{m\_Color}};}
-\DoxyCodeLine{00093\ \ \ \ \ \};}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00095\ \}}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ImGui::ColorPicker3("{}\#\#MyColor\#\#5"{},\ (float*)m\_Color,\ ImGuiColorEditFlags\_PickerHueBar\ |\ ImGuiColorEditFlags\_NoSidePreview\ |\ ImGuiColorEditFlags\_NoInputs\ |\ ImGuiColorEditFlags\_NoAlpha);}}
+\DoxyCodeLine{00086\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ImGui::SameLine();}}
+\DoxyCodeLine{00087\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ImGui::SetNextItemWidth(w);}}
+\DoxyCodeLine{00088\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ImGui::ColorPicker3("{}\#\#MyColor\#\#6"{},\ (float*)m\_Color,\ ImGuiColorEditFlags\_PickerHueWheel\ |\ ImGuiColorEditFlags\_NoSidePreview\ |\ ImGuiColorEditFlags\_NoInputs\ |\ ImGuiColorEditFlags\_NoAlpha);}}
+\DoxyCodeLine{00089\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //*/}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ ImGui::End();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ ImVec4*\ \mbox{\hyperlink{class_im_g_u_i_app___demo_1_1_color_picker_layer_a7a5c64746bba2f19a1dbcbed3c1edab5}{m\_Color}};}
+\DoxyCodeLine{00096\ \ \ \ \ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \}}
 
 \end{DoxyCode}

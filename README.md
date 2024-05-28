@@ -44,7 +44,7 @@ cd ImGuiApp_Demo
     ```
     .\debugBuild_MinGW.bat
     ``` 
-- For Linux build and run the project using
+- For Windows or Linux build and run the project using 
 
     ```
     mkdir build && cd build
@@ -55,9 +55,12 @@ cd ImGuiApp_Demo
 
     ./bin/ImGuiApp_Demo
     ``` 
-- Customise to your needs
+    
+- Customise and use other project structures according to your needs
 
+![Example project structure setups for using ImGuiApp](figures/fig_4.png)
 
+Example project structure setups for using ImGuiApp 
 
 
 ## 3rd party libaries

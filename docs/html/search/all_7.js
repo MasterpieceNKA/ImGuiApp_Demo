@@ -1,15 +1,9 @@
 var searchData=
 [
-  ['iga_5fassert_0',['IGA_ASSERT',['../_logger_8h.html#a1654aa6e217f372da3eae31962a9642c',1,'Logger.h']]],
-  ['iga_5fcore_5fassert_1',['IGA_CORE_ASSERT',['../_logger_8h.html#ac1db8a1750ae801ee3593c15a1fc2f64',1,'Logger.h']]],
-  ['iga_5fcore_5ferror_2',['IGA_CORE_ERROR',['../_logger_8h.html#ad459d145311abd443750739f9a134da8',1,'Logger.h']]],
-  ['iga_5fcore_5finfo_3',['IGA_CORE_INFO',['../_logger_8h.html#a164d4ce5cef3e4fe2e16922b97e4f428',1,'Logger.h']]],
-  ['iga_5fcore_5fwarn_4',['IGA_CORE_WARN',['../_logger_8h.html#a789552bbad4cecbb7c7259b404d7c914',1,'Logger.h']]],
-  ['iga_5ferror_5',['IGA_ERROR',['../_logger_8h.html#a0f1c52bd6b256fe169653e4bc53654cf',1,'Logger.h']]],
-  ['iga_5finfo_6',['IGA_INFO',['../_logger_8h.html#aa6469226a385c160a8874f68e85355a8',1,'Logger.h']]],
-  ['iga_5fwarn_7',['IGA_WARN',['../_logger_8h.html#acb4a5242d78a5e1cf39cf8a1ac0b54e2',1,'Logger.h']]],
-  ['imguiapp_20demo_20project_8',['ImGuiApp Demo Project',['../index.html',1,'']]],
-  ['imguiapp_20project_9',['ImGuiApp Project',['../md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html',1,'']]],
-  ['imguiapp_5fdemo_2ecpp_10',['ImGuiApp_Demo.cpp',['../_im_gui_app___demo_8cpp.html',1,'']]],
-  ['init_11',['Init',['../class_im_gui_app_1_1_logger.html#a44cc1b46c117ff6d70fa56dbb1b9641d',1,'ImGuiApp::Logger']]]
+  ['iga_5flogger_0',['IGA_Logger',['../class_im_gui_app_1_1_i_g_a___logger.html',1,'ImGuiApp']]],
+  ['imguiapp_20demo_20project_1',['ImGuiApp Demo Project',['../index.html',1,'']]],
+  ['imguiapp_20project_2',['ImGuiApp Project',['../md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html',1,'']]],
+  ['imguiapp_20project_20setup_3',['Sample ImGuiApp project setup',['../md__c_1_2dev_2_open_g_l_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html#autotoc_md3',1,'']]],
+  ['imguiapp_5fdemo_2ecpp_4',['ImGuiApp_Demo.cpp',['../_im_gui_app___demo_8cpp.html',1,'']]],
+  ['init_5',['Init',['../class_im_gui_app_1_1_i_g_a___logger.html#aac1a64de82b0800d65d3a31ee4891eb7',1,'ImGuiApp::IGA_Logger']]]
 ];

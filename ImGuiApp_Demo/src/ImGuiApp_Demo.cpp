@@ -1,6 +1,6 @@
 /**
  * @file ImGuiApp_Demo.cpp
- * @author n.a (na@MasterpieceTechVideos.com)
+ * @author n.a (na@mail.com)
  * @brief Definition of the application to run in the main function defined in the EntryPoint (EntryPoint.h)
  * @version 0.0.0
  * @date 2024-05-20

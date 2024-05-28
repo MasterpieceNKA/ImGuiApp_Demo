@@ -1,0 +1,59 @@
+\doxysection{Im\+Gui\+App\+::IGA\+\_\+\+Logger Class Reference}
+\hypertarget{class_im_gui_app_1_1_i_g_a___logger}{}\label{class_im_gui_app_1_1_i_g_a___logger}\index{ImGuiApp::IGA\_Logger@{ImGuiApp::IGA\_Logger}}
+
+
+Class for performing logging function.  
+
+
+
+
+{\ttfamily \#include $<$IGA\+\_\+\+Logger.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_im_gui_app_1_1_i_g_a___logger_aac1a64de82b0800d65d3a31ee4891eb7}\label{class_im_gui_app_1_1_i_g_a___logger_aac1a64de82b0800d65d3a31ee4891eb7} 
+static void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em Initialises the class logging variables. \end{DoxyCompactList}\item 
+static std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ \mbox{\hyperlink{class_im_gui_app_1_1_i_g_a___logger_ac8c26043a079937a73a9ea291df1484b}{Get\+Core\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Returns the logger object for the core Im\+Gui\+App app. \end{DoxyCompactList}\item 
+static std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ \mbox{\hyperlink{class_im_gui_app_1_1_i_g_a___logger_a9ea21d135a54805256d50f291318d53a}{Get\+Client\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Returns the logger object for the client Im\+Gui\+App app. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for performing logging function. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_im_gui_app_1_1_i_g_a___logger_a9ea21d135a54805256d50f291318d53a}\index{ImGuiApp::IGA\_Logger@{ImGuiApp::IGA\_Logger}!GetClientLogger@{GetClientLogger}}
+\index{GetClientLogger@{GetClientLogger}!ImGuiApp::IGA\_Logger@{ImGuiApp::IGA\_Logger}}
+\doxysubsubsection{\texorpdfstring{GetClientLogger()}{GetClientLogger()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_i_g_a___logger_a9ea21d135a54805256d50f291318d53a} 
+static std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ Im\+Gui\+App\+::\+IGA\+\_\+\+Logger\+::\+Get\+Client\+Logger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the logger object for the client Im\+Gui\+App app. 
+
+\begin{DoxyReturn}{Returns}
+static instance of spdlog object 
+\end{DoxyReturn}
+\Hypertarget{class_im_gui_app_1_1_i_g_a___logger_ac8c26043a079937a73a9ea291df1484b}\index{ImGuiApp::IGA\_Logger@{ImGuiApp::IGA\_Logger}!GetCoreLogger@{GetCoreLogger}}
+\index{GetCoreLogger@{GetCoreLogger}!ImGuiApp::IGA\_Logger@{ImGuiApp::IGA\_Logger}}
+\doxysubsubsection{\texorpdfstring{GetCoreLogger()}{GetCoreLogger()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_i_g_a___logger_ac8c26043a079937a73a9ea291df1484b} 
+static std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ Im\+Gui\+App\+::\+IGA\+\_\+\+Logger\+::\+Get\+Core\+Logger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the logger object for the core Im\+Gui\+App app. 
+
+\begin{DoxyReturn}{Returns}
+static instance of spdlog object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+IGA\+\_\+\+Logger.\+h\item 
+IGA\+\_\+\+Logger.\+cpp\end{DoxyCompactItemize}

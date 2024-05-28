@@ -1,6 +1,6 @@
 /**
  * @file DemoApp.h
- * @author n.a (na@MasterpieceTechVideos.com)
+ * @author n.a (na@mail.com)
  * @brief Defines the DemoApp class which extends the ImGuiApp::App for defining the application to run
  * @version 0.0.0
  * @date 2024-05-20

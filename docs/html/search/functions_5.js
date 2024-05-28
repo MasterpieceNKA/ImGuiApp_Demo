@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_0',['Init',['../class_im_gui_app_1_1_logger.html#a44cc1b46c117ff6d70fa56dbb1b9641d',1,'ImGuiApp::Logger']]]
+  ['init_0',['Init',['../class_im_gui_app_1_1_i_g_a___logger.html#aac1a64de82b0800d65d3a31ee4891eb7',1,'ImGuiApp::IGA_Logger']]]
 ];
