@@ -26,12 +26,11 @@ ImGuiApp Demo Application with undocked windows
 
 ## Getting Started
 1. Clone the repository
+    ```
+    git clone --recursive https://github.com/MasterpieceNKA/ImGuiApp_Demo.git
 
-```
-git clone --recursive https://github.com/MasterpieceNKA/ImGuiApp_Demo.git
-
-cd ImGuiApp_Demo
-``` 
+    cd ImGuiApp_Demo
+    ``` 
 
 2. Initialise vcpkg by running the bootstraping script depending on your operating system.  ```.\vcpkg\bootstrap-vcpkg.bat``` ( on Windows), 
  ```vcpkg\bootstrap-vcpkg.sh``` (on Linux)
@@ -40,26 +39,22 @@ cd ImGuiApp_Demo
 
 3. Build and run the project depending on Operating System
 
-- For Windows or Linux build and run the project using 
+    - For Windows or Linux build and run the project using 
 
-    ```
-    mkdir build && cd build
+        ```
+        mkdir build && cd build
 
-    cmake ..
+        cmake ..
 
-    cmake --build .
+        cmake --build .
 
-    ./bin/ImGuiApp_Demo
-    ``` 
-- Or using provided scripts for Windows using either Clang  or MinGW 
+        ./bin/ImGuiApp_Demo
+        ``` 
 
-    ```
-    .\debugBuild_clang.bat
-    ```  
+    - Or using provided build scripts for Windows that either Clang ```.\debugBuild_clang.bat```   or MinGW ```.\debugBuild_MinGW.bat```         
 
-    ```
-    .\debugBuild_MinGW.bat
-    ``` 
+
+        
     
 4. Customise and use other project structures according to your needs
 
