@@ -11,6 +11,8 @@ if(NOT DEFINED CMAKE_CXX_STANDARD)
 	set(CMAKE_CXX_STANDARD 17)
 endif()
 
+find_package(Freetype REQUIRED)
+    
 add_subdirectory(ImGuiApp)
 add_subdirectory(ImGuiApp_Demo)
 

@@ -16,6 +16,7 @@ set(ImGuiApp_Demo_SOURCE ${CMAKE_CURRENT_LIST_DIR}/src/ImGuiApp_Demo.cpp)
 add_executable(${PROJECT_NAME} ${ImGuiApp_Demo_SOURCE})
 
 target_link_libraries(${PROJECT_NAME} PUBLIC ImGuiApp)
+target_link_libraries(${PROJECT_NAME} PRIVATE Freetype::Freetype)
 
 # Copy imgui.ini configuration file into application folder  
 #MESSAGE(STATUS "ImGuiApp_Demo  CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
