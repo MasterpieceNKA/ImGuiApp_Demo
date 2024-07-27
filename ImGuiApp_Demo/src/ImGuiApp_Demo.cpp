@@ -15,6 +15,8 @@
 #include "SampleLayers.h"
 #include "OpenGLSampleLayer.h"
 
+#include "IGA_Logger.h"
+
 #include <string> 
 
 /**
@@ -26,6 +28,9 @@
  */
 ImGuiApp::App* ImGuiApp::CreateApp(int argc, char** argv)
 {
+	IGA_INFO( "[ImGuiApp] Sample info log");
+	IGA_WARN( "[ImGuiApp] Sample warning log");
+	IGA_ERROR("[ImGuiApp] Sample error log");
 	ImGuiApp::AppSpecification spec;
 	spec.Name = "ImGui App Example";
 
