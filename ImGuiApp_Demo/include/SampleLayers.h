@@ -20,9 +20,6 @@
 
 #include <string>
 
-#include "pbPlots.hpp"
-#include "supportLib.hpp"
-
 namespace ImGUIApp_Demo{
     /**
      * @brief Sample ImGui frame Layer object containing a Button
