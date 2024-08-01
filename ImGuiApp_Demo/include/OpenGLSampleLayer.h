@@ -63,6 +63,7 @@ namespace ImGUIApp_Demo{
         virtual void OnUIRender() override
         {
             ImGui::Begin("OpenGL"); 
+
             const float window_width = ImGui::GetContentRegionAvail().x;
 		    const float window_height = ImGui::GetContentRegionAvail().y;
             
@@ -79,7 +80,7 @@ namespace ImGUIApp_Demo{
                 ImVec2(1, 0)
             );
 
-            ImGui::End();         
+            ImGui::End();   
         }
         /**
          * @brief Called after rendering loop ImGui frame items i.e. after ImGui::Render(); line.

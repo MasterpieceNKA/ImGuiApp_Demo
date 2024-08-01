@@ -49,7 +49,15 @@ ImGuiApp::App* ImGuiApp::CreateApp(int argc, char** argv)
 				app->Close();
 			}
 			ImGui::EndMenu();
-		}
+		} 
+		if (ImGui::BeginMenu("Open File"))
+		{
+			if (ImGui::MenuItem("Open image files")) {
+				
+			}
+			ImGui::EndMenu();
+		} 
 	}); 
+	
 	return app;
 } 
