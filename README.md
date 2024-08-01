@@ -6,7 +6,7 @@ This project show cases a sample application using [ImGuiApp](https://github.com
 
 This project is inspired by [Walnut](https://github.com/StudioCherno/Walnut) which is built using uses Vulkan instead of OpenGL.
 
-![Image of ImGuiApp Demo](figures/fig_1.png)
+<img src="figures/fig_1.png" alt="Image of ImGuiApp Demo" style="width:900px;"/>
 
 ImGuiApp Demo Application
 
@@ -14,7 +14,7 @@ ImGuiApp Demo Application
 
 
 
-![Image of ImGuiApp Demo with undocked windows](figures/fig_2.png)
+<img src="figures/fig_2.png" alt="Image of ImGuiApp Demo with undocked windows" style="width:900px;"/>
 
 ImGuiApp Demo Application with undocked windows
 
@@ -26,39 +26,52 @@ ImGuiApp Demo Application with undocked windows
 
 ## Getting Started
 1. Clone the repository
-    ```
+    ```ps
     git clone --recursive https://github.com/MasterpieceNKA/ImGuiApp_Demo.git
 
     cd ImGuiApp_Demo
     ``` 
 
-2. Initialise vcpkg by running the bootstraping script depending on your operating system.  ```.\vcpkg\bootstrap-vcpkg.bat``` ( on Windows), 
- ```vcpkg\bootstrap-vcpkg.sh``` (on Linux)
+2. Build and run the project depending on Operating System
 
+    For Windows or Linux build and run the project using (with clang compiler) 
 
+    ```ps
+    mkdir build 
+    
+    cd build
 
-3. Build and run the project depending on Operating System
+    cmake ..
 
-    - For Windows or Linux build and run the project using 
+    cmake --build .
 
-        ```
-        mkdir build && cd build
+    .\bin\Debug\ImGuiApp_Demo
+    ``` 
 
-        cmake ..
+    For Windows or Linux build and run the project using (with default compiler)
 
-        cmake --build .
+    ```
 
-        ./bin/ImGuiApp_Demo
-        ``` 
+    mkdir build 
+    
+    cd build
 
-    - Or using provided build scripts for Windows that either Clang ```.\debugBuild_clang.bat```   or MinGW ```.\debugBuild_MinGW.bat```         
+    cmake .. -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang
+
+    cmake --build .
+
+    .\bin\Debug\ImGuiApp_Demo
+
+    ```
+    
+    Or using provided build scripts for Windows that either Clang ```.\debugBuild_clang.bat```   or MinGW ```.\debugBuild_MinGW.bat```         
 
 
         
     
-4. Customise and use other project structures according to your needs
-
-![Example project structure setups for using ImGuiApp](figures/fig_4.png)
+3. Customise and use other project structures according to your needs
+ 
+<img src="figures/fig_4.png" alt="Image of ImGuiApp sample project structures" style="width:900px;"/>
 
 Example project structure setups for using ImGuiApp 
 

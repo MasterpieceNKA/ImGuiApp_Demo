@@ -150,6 +150,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Close</b> ()</td></tr
 <tr class="memitem:abc34fed94848fa255e7db72305995ce7" id="r_abc34fed94848fa255e7db72305995ce7"><td class="memItemLeft" align="right" valign="top">GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc34fed94848fa255e7db72305995ce7">GetWindowHandle</a> () const</td></tr>
 <tr class="memdesc:abc34fed94848fa255e7db72305995ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the main Window Handle object of the application.  <br /></td></tr>
 <tr class="separator:abc34fed94848fa255e7db72305995ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0df3a21e82b461e57ba53966889a5924" id="r_a0df3a21e82b461e57ba53966889a5924"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_im_gui_app_1_1_layer.html">Layer</a> &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0df3a21e82b461e57ba53966889a5924">GetLayerStack</a> ()</td></tr>
+<tr class="memdesc:a0df3a21e82b461e57ba53966889a5924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to m_LayerStack (the <a class="el" href="class_im_gui_app_1_1_layer.html" title="Template class for ImGui frames. An ImGui frame is marked by.">Layer</a> stack object)  <br /></td></tr>
+<tr class="separator:a0df3a21e82b461e57ba53966889a5924"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -243,6 +246,34 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns static instance of the <a class="el" href="class_im_gui_app_1_1_app.html" title="Class for maintaining the life cycle of the application.">App</a> object. </p>
 <p>Returns reference to the current <a class="el" href="class_im_gui_app_1_1_app.html" title="Class for maintaining the life cycle of the application.">App</a> object instance stored by s_Instance.</p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_im_gui_app_1_1_app.html" title="Class for maintaining the life cycle of the application.">App</a>&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a0df3a21e82b461e57ba53966889a5924" name="a0df3a21e82b461e57ba53966889a5924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0df3a21e82b461e57ba53966889a5924">&#9670;&#160;</a></span>GetLayerStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_im_gui_app_1_1_layer.html">Layer</a> &gt; &gt; * ImGuiApp::App::GetLayerStack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get pointer to m_LayerStack (the <a class="el" href="class_im_gui_app_1_1_layer.html" title="Template class for ImGui frames. An ImGui frame is marked by.">Layer</a> stack object) </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::shared_ptr&lt;Layer&gt;&gt;* </dd></dl>
 
 </div>
 </div>
