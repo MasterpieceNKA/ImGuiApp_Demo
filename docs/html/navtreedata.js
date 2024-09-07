@@ -26,12 +26,12 @@ var NAVTREE =
 [
   [ "ImGui App Demo", "index.html", [
     [ "ImGuiApp Demo Project", "index.html", "index" ],
-    [ "ImGuiApp Project", "md__d_1_2temp_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html", [
-      [ "Requirements", "md__d_1_2temp_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Getting Started", "md__d_1_2temp_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html#autotoc_md2", null ],
-      [ "Sample ImGuiApp project setup", "md__d_1_2temp_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html#autotoc_md3", null ],
-      [ "3rd party libaries", "md__d_1_2temp_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html#autotoc_md4", null ],
-      [ "Additional", "md__d_1_2temp_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html#autotoc_md5", null ]
+    [ "ImGuiApp Project", "md__d_1_2ecmpg_2test_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html", [
+      [ "Requirements", "md__d_1_2ecmpg_2test_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Getting Started", "md__d_1_2ecmpg_2test_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Sample ImGuiApp project setup", "md__d_1_2ecmpg_2test_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "3rd party libaries", "md__d_1_2ecmpg_2test_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "Additional", "md__d_1_2ecmpg_2test_2_im_gui_app___demo_2_im_gui_app_2_r_e_a_d_m_e.html#autotoc_md5", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

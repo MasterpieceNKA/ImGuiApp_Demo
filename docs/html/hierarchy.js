@@ -10,8 +10,5 @@ var hierarchy =
       [ "ImGUIApp_Demo::DemoWindowLayer", "class_im_g_u_i_app___demo_1_1_demo_window_layer.html", null ],
       [ "ImGUIApp_Demo::ExampleLayer", "class_im_g_u_i_app___demo_1_1_example_layer.html", null ],
       [ "ImGUIApp_Demo::OpenGLSampleLayer", "class_im_g_u_i_app___demo_1_1_open_g_l_sample_layer.html", null ]
-    ] ],
-    [ "ImGuiApp::Random", "class_im_gui_app_1_1_random.html", null ],
-    [ "ImGuiApp::ScopedTimer", "class_im_gui_app_1_1_scoped_timer.html", null ],
-    [ "ImGuiApp::Timer", "class_im_gui_app_1_1_timer.html", null ]
+    ] ]
 ];
